@@ -1,5 +1,9 @@
 ### Changelog MYMODBUS Stable
 
+# 18/01/2020 V1.2 S
+
+- correction du script d'ecriture ( ajour de l'unit id )  
+
 # 28/12/2019 V1.1 S
 - passage en stable
 
