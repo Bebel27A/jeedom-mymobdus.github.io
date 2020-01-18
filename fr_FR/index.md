@@ -6,7 +6,7 @@ Le Plugin MyModBus sert à communiquer en protocole Modbus via plusieurs types d
 	- Liaison modbus Ethernet
 	- Liaison Série Mode RTU ( A venir )
 
-Il est compatible avec plusieurs types d’automates (Crouzet, IPX…)
+Il est compatible avec plusieurs types d’automates (Crouzet, IPX  , Wago …)
 
 Cronfiguration du plugin
 ===
@@ -99,5 +99,6 @@ Il faut maintenant créer les commandes du virtuel pour cela on s’appuie sur c
 FAQ
 ===
 
-Si l’état ne remontent pas au niveau du virtuel ==> redémarrer le démon MyModbus
+Si l’état ne remonte pas au niveau du virtuel ==> redémarrer le démon MyModbus
 
+Merci à Anthony_Ferreira pour ce début de documentation sur les automates Crouzet
