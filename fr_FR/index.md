@@ -101,4 +101,4 @@ FAQ
 
 Si l’état ne remonte pas au niveau du virtuel ==> redémarrer le démon MyModbus
 
-Merci à Anthony_Ferreira pour ce début de documentation sur les automates Crouzet
+Merci à @Anthony_Ferreira pour ce début de documentation sur les automates Crouzet
