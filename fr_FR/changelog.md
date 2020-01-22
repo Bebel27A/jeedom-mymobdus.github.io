@@ -1,5 +1,7 @@
 ### Changelog MYMODBUS
 
+# 22/01/2020 V1.3
+- Résolution du bug sur le retour des valeurs, des équipements à IP commune.
 
 # 18/01/2020 V1.2 b
 - Découverte d'un bug sur la lecture d'une même ip avec un unit différent , En cours de résolution 
