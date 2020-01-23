@@ -1,4 +1,4 @@
-### Changelog MYMODBUS
+### Changelog MYMODBUS BETA
 
 # 22/01/2020 V1.3
 - Résolution du bug sur le retour des valeurs, des équipements à IP commune.
