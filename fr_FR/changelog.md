@@ -1,5 +1,8 @@
 ### Changelog MYMODBUS STABLE
 
+# 03/02/2020 V1.3.1
+-Suppression du time out sur la gestion du port de com , car il entrainait des erreurs de lecture
+
 # 22/01/2020 V1.3
 - Résolution du bug sur le retour des valeurs, des équipements à IP commune.
 
