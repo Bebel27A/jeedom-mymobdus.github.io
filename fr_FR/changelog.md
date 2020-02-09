@@ -1,5 +1,8 @@
 ### Changelog MYMODBUS STABLE
 
+# 09/02/2020 V1.3.2
+-Ajout Python PIP dans le script d'installation des dépendances. (Suite problème remonté sur Community par @hitaki)
+
 # 03/02/2020 V1.3.1
 -Suppression du time out sur la gestion du port de com , car il entrainait des erreurs de lecture
 
