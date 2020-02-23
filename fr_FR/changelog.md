@@ -1,5 +1,8 @@
 ### Changelog MYMODBUS STABLE
 
+# 23/02/2020 V1.4.0
+-Ajout compatibilité Jeedom en V3.3 ( suite test fais en V3.3 ) 
+
 # 09/02/2020 V1.3.2
 -Ajout Python PIP dans le script d'installation des dépendances. (Suite problème remonté sur Community par @hitaki)
 
