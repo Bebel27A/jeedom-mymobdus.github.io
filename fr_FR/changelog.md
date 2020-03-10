@@ -1,7 +1,10 @@
 ### Changelog MYMODBUS 
 
+# 10/03/2020 V1.4.2
+-Mise à jour du script des dépendances .
+
 # 05/03/2020 V1.4.1
--Mise à jour du logo au standard officiel 
+-Mise à jour du logo au standard officiel.
 
 # 23/02/2020 V1.4.0
 -Ajout compatibilité Jeedom en V3.3 ( suite test fais en V3.3 ) 
