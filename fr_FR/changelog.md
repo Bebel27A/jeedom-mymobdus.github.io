@@ -1,7 +1,7 @@
 ### Changelog MYMODBUS 
 
-# 10/03/2020 V1.4.2
--Mise à jour du script des dépendances .
+# 15/03/2020 V1.4.2
+-Mise à jour du script des dépendances V1.3
 
 # 05/03/2020 V1.4.1
 -Mise à jour du logo au standard officiel.
