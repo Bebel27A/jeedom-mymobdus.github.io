@@ -114,13 +114,13 @@ Dans ce document, vous voyez d'autres informations, comme des Byte ou Double wor
 Exemple, pour la première entrée, on peut avoir soit %IW0 (16 bits) soit %IX0.0, %IX0.1, ... , %IX0.15 (soit les 16 bits du mot, mais adressable un par un)
 
 
-Parlons modbus, nous avons dans le module 2 "data type":
+- Parlons modbus, nous avons dans le module 2 "data type":
 
 ![WAGO](../images/WAGO_types_reg.jpg)
 
 Pour le moment, je n'ai pas trouvé la différence entre Input Register et Holding Register, ni entre Coils et Discrete Imputs, et j'ai réussi à tout faire avec Coils et Holding Register, donc je ne parlerais que de ces 2 types.
 
-Comment trouver les adresses ModBus correspondant aux %I, %Q, %M ? 
+- Comment trouver les adresses ModBus correspondant aux %I, %Q, %M ? 
 
 ![WAGO](../images/WAGO_exemple.jpg)
 
@@ -129,18 +129,18 @@ Donc pour simplifier :
 - %MX0.0 -> %MX1279.15 ont les adresses de 12888 à 32750
 Je ne parle pas des %QX car c'est un peu particulier et j'en parle après.
 
-
+- Et les Sorties alors ? 
 Maintenant ça va devenir plus compliqué, on va parler des mots et meme si les mots permettent de lire les mmêmes informations, les adresses sont différentes.
 Par exemple, si je veux QX0.3, ça correspond au 4è bit sur mot de sortie 0, soit %QW0 bit 3.
 
 J'espère que vous avez suivi, car avec le modbus, on ne peut pas lire un %QX, on doit lire un %QW et ensuite séparer chaque bit dans un virtuel comme indiqué plus haut dans cette documentation.
 
-Et pour couronner le tout, %QW0 a l'adresse 512, %QW1 à l'adresse 513, ... 
+Et pour couronner le tout, %QW0 a l'adresse 512, %QW1 a l'adresse 513, ... 
 
 Bon allez, pour vous simplifier la tâche, j'ai créé un document excel pour les premières adresses, vous le trouverez ici : 
 https://github.com/Bebel27A/jeedom-mymobdus.github.io/blob/master/fr_FR/WAGO_adressage.xlsx
 
-**Voilà, maintenant vous connaissez l'adressage, on va entrer dans le vif du sujet**
+- **Voilà, maintenant vous connaissez l'adressage, on va entrer dans le vif du sujet**
 
 Nous avons donc notre Jeedom, notre Wago, ils communiquent via le plugin. Parfait !
 On peux maintenant faire 3 choses : 
@@ -151,7 +151,7 @@ On peux maintenant faire 3 choses :
 Ne pensez pas que vous pourrez directement écrire sur une sortie pour allumer une lampe, ça ne fonctionnera pas, il faut que ce soit l'automate qui active l'entrée.
 **Donc les entrées et sorties sont en fait en lecture seules** (je peux me tromper car je n'ai pas fait trop de tests, mais de toute façon, pour éviter les soucis c'est nettement mieux de faire comme ça)
 
-Rapidement, voici comment lire les informations via jeedom
+- Rapidement, voici comment lire les informations via jeedom
 Pour lire %IX0.0 : 
 
 ![IX](../images/WAGO_jeedom_IX.jpg)
@@ -164,30 +164,30 @@ Et pour écrire les %MX (le principe est le même pour les MW)
 
 ![MX](../images/WAGO_jeedom_MX.jpg)
 
-Voilà, avec ça vous pouvez lire les entrées & sorties, ainsi qu'écrire les MX
+- Voilà, avec ça vous pouvez lire les entrées & sorties, ainsi qu'écrire les MX
 Quelques explications sur mes MX, ici j'ai voulu tester 3 fonctions avec la lampe de test que j'ai a côté de moi.
 1. Simuler l'appuis sur l'interrupteur
 1. Forcer l'extinction
 1. Forcer l'allumage
 
-Par contre, vous vous en doutez, ça ne suffit pas, ici on met juste les variables suivantes à 1 puis 0 (simuler un appuis sur interrupteur virtuel)
+- Par contre, vous vous en doutez, ça ne suffit pas, ici on met juste les variables suivantes à 1 puis 0 (simuler un appuis sur interrupteur virtuel)
 1. Addr 12337 -> %MX3.4  (pour simuler l'appuis sur l'interrupteur de la pièce)
 1. Addr 12352 -> %MX4.0  (pour forcer l'allumage de la lampe Spots1)
 1. Addr 12353 -> %MX4.1  (pour forcer l'extinction)
 
-Il faut maintenant adapter le programme de l'automate dans CodeSys
+- Il faut maintenant adapter le programme de l'automate dans CodeSys
 
 *Première chose à faire:* déclarer les %MX en tant que variables.
 Pour celà, dans Resources/Global variables je crée un nouveau fichiers de variables que j'ai appelé Variables_virtuelles
 
-Dedans, il faut déclarer tous les %MX et %MW utilisé : 
+- Dedans, il faut déclarer tous les %MX et %MW utilisé : 
 > vrt_LUM_Salle_Spots1 AT %MX3.1 : BOOL;
 
 Pour vous aider, dans le fichier excel, vous trouverez un 4è onglet, qui crée directement les syntaxes, plus qu'à copier-coller ou adapter.
 
 Voilà, nous avons maintenant des *interrupteurs* virtuels appelé vrt_LUM_Salle_Sports1 dans mon exemple. On peut donc l'utiliser dans le code.
 
-Dans l'exmple qui suit, je parle de la config chez moi, donc il faut l'adpater pour vous. 
+- Dans l'exemple qui suit, je parle de la config chez moi, donc il faut l'adpater pour vous. 
 Je code en ST dans CodeSys, donc désolé pour ceux qui préfère le Ladder ou autre
 
 	(* Salle *)
