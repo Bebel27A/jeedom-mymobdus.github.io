@@ -95,6 +95,18 @@ Il faut maintenant créer les commandes du virtuel pour cela on s’appuie sur c
 
 ![Config1_Crouzet](../images/action_virtuel.png)
 
+Configuration d'un WAGO
+===
+
+Dans cette partie, je vais parler de la configuration du plugin pour un automate WAGO 750-x
+
+Petite explication sur l'adressage WAGO. Nous ne parlerons ici que des Entrées %I, des Sorties %Q et des mémoires %M
+Chacune de ces adresses peut être lue et/ou écrite sous forme de bit (0 ou 1) ou de mot (16 bits = de 0 à 65535)
+
+Exemple, pour la première entrée, on peut avoir soit %IW0 (16 bits) soit %IX0.0, %IX0.1, ... , %IX0.15 (soit les 16 bits du mot, mais adressable un par un)
+
+
+
 
 FAQ
 ===
