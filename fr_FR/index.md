@@ -189,24 +189,25 @@ Voilà, nous avons maintenant des *interrupteurs* virtuels appelé vrt_LUM_Salle
 
 Dans l'exmple qui suit, je parle de la config chez moi, donc il faut l'adpater pour vous. 
 Je code en ST dans CodeSys, donc désolé pour ceux qui préfère le Ladder ou autre
-```(* Salle *)
-        (*  Virtuels  *)
-		vrt_temp_salle_spots1 := FALSE;
-		IF (vrt_LUM_Salle_Spots1_On) THEN
-			IF (NOT LUM_Salle_Spots1) THEN
-				vrt_temp_salle_spots1:=TRUE;
-			END_IF
-		END_IF
-		IF (vrt_LUM_Salle_Spots1_Off) THEN
-			IF (LUM_Salle_Spots1) THEN
-				vrt_temp_salle_spots1:=TRUE;
-			END_IF
-		END_IF
 
-input_Lum_Salle_Spots1:=simple_INT_Salle_TV_1 OR simple_INT_Salle_Esc_Lum_G OR simple_INT_Coul_Chaud_1 OR simple_INT_Salle_Ecran_Lum_G OR simple_INT_Salle_Cuis_G OR vrt_LUM_Salle_Spots1 OR vrt_temp_salle_spots1;
+	(* Salle *)
+	        (*  Virtuels  *)
+			vrt_temp_salle_spots1 := FALSE;
+			IF (vrt_LUM_Salle_Spots1_On) THEN
+				IF (NOT LUM_Salle_Spots1) THEN
+					vrt_temp_salle_spots1:=TRUE;
+				END_IF
+			END_IF
+			IF (vrt_LUM_Salle_Spots1_Off) THEN
+				IF (LUM_Salle_Spots1) THEN
+					vrt_temp_salle_spots1:=TRUE;
+				END_IF
+			END_IF
+		
+	input_Lum_Salle_Spots1:=simple_INT_Salle_TV_1 OR simple_INT_Salle_Esc_Lum_G OR simple_INT_Coul_Chaud_1 OR simple_INT_Salle_Ecran_Lum_G OR simple_INT_Salle_Cuis_G OR vrt_LUM_Salle_Spots1 OR vrt_temp_salle_spots1;
 
-SW_LUM_Salle_Spots1(Interrupteur:=input_Lum_Salle_Spots1); LUM_Salle_Spots1:=SW_LUM_Salle_Spots1.Lampe;
-```
+	SW_LUM_Salle_Spots1(Interrupteur:=input_Lum_Salle_Spots1); LUM_Salle_Spots1:=SW_LUM_Salle_Spots1.Lampe;
+
 
 Un peu d'explications : ma sortie physique s'appelle LUM_Salle_Spots1 (elle est assigné dans la configuration physique de l'automate dans CodeSys).
 Maintenant, je vais prendre le code à l'envers pour une meilleure compréhension :
@@ -227,20 +228,21 @@ A quoi servent ces 2 virtuels :
 
 Comment fonctionne le ON et le OFF
 Ca se fait dans le premier bout de code 
-```
-        (*  Virtuels  *)
-		vrt_temp_salle_spots1 := FALSE;
-		IF (vrt_LUM_Salle_Spots1_On) THEN
-			IF (NOT LUM_Salle_Spots1) THEN
-				vrt_temp_salle_spots1:=TRUE;
-			END_IF
-		END_IF
-		IF (vrt_LUM_Salle_Spots1_Off) THEN
-			IF (LUM_Salle_Spots1) THEN
-				vrt_temp_salle_spots1:=TRUE;
-			END_IF
-		END_IF
-```
+
+	(*  Virtuels  *)
+	vrt_temp_salle_spots1 := FALSE;
+	IF (vrt_LUM_Salle_Spots1_On) THEN
+   	   IF (NOT LUM_Salle_Spots1) THEN
+      	      vrt_temp_salle_spots1:=TRUE;
+   	   END_IF
+	END_IF
+	
+	IF (vrt_LUM_Salle_Spots1_Off) THEN
+   	   IF (LUM_Salle_Spots1) THEN
+      	      vrt_temp_salle_spots1:=TRUE;
+   	   END_IF
+	END_IF
+
 En gros, si on veut faire un ON, on doit juste faire quelque chose si la lumière est éteinte, et dans ce cas on simule un appuis sur l'interrupteur temp.
 Idem pour le OFF, on ne doit faire quelquechose que si la lumière est allumée, et dans ce cas c'est aussi une simulation d'appuis sur l'interrupteur temp.
 
