@@ -269,6 +269,7 @@ Voilà, vous savez tout maintenant sur la configuration de MyModBus pour les aut
 FAQ
 ===
 
-Si l’état ne remonte pas au niveau du virtuel ==> redémarrer le démon MyModbus
+
 
 Merci à @Anthony_Ferreira pour ce début de documentation sur les automates Crouzet
+Merci à @vvaurette pour la partie de documention sur le Wago
