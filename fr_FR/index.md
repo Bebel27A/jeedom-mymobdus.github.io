@@ -139,6 +139,40 @@ https://github.com/Bebel27A/jeedom-mymobdus.github.io/blob/master/fr_FR/WAGO_adr
 
 **Voilà, maintenant vous connaissez l'adressage, on va entrer dans le vif du sujet**
 
+Nous avons donc notre Jeedom, notre Wago, ils communiquent via le plugin. Parfait !
+On peux maintenant faire 3 choses : 
+- récupérer l'état des entrées %IX et %IW
+- récupérer l'état des sorties %QW (et via des virtuels les %QX)
+- lire et écrire dans des registres mémoire (%MX ou %MW)
+
+Ne pensez pas que vous pourrez directement écrire sur une sortie pour allumer une lampe, ça ne fonctionnera pas, il faut que ce soit l'automate qui active l'entrée.
+**Donc les entrées et sorties sont en fait en lecture seules** (je peux me tromper car je n'ai pas fait trop de tests, mais de toute façon, pour éviter les soucis c'est nettement mieux de faire comme ça)
+
+Rapidement, voici comment lire les informations via jeedom
+Pour lire %IX0.0 : 
+
+![IX](../images/WAGO_jeedom_IX.jpg)
+
+Pour les %QW : 
+
+![QW](../images/WAGO_jeedom_QW.jpg)
+
+Et pour écrire les %MX (le principe est le même pour les MW)
+
+![MX](../images/WAGO_jeedom_MX.jpg)
+
+Voilà, avec ça vous pouvez lire les entrées & sorties, ainsi qu'écrire les MX
+Quelques explications sur mes MX, ici j'ai voulu tester 3 fonctions avec la lampe de test que j'ai a côté de moi.
+1-Simuler l'appuis sur l'interrupteur
+2-Forcer l'extinction
+3-Forcer l'allumage
+
+Par contre, vous vous en doutez, ça ne suffit pas, ici on met juste les variables suivantes à 1 puis 0 (simuler un appuis sur interrupteur virtuel)
+-Addr 12337 -> %MX3.4  (pour simuler l'appuis sur l'interrupteur de la pièce)
+-Addr 12352 -> %MX4.0  (pour forcer l'allumage de la lampe Spots1)
+-Addr 12353 -> %MX4.1  (pour forcer l'extinction)
+
+Il faut maintenant adapter le programme de l'automate dans CodeSys
 
 
 
