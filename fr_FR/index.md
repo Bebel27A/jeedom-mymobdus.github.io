@@ -95,6 +95,9 @@ Il faut maintenant créer les commandes du virtuel pour cela on s’appuie sur c
 
 ![Config1_Crouzet](../images/action_virtuel.png)
 
+
+
+
 Configuration d'un WAGO
 ===
 
