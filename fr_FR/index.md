@@ -103,6 +103,8 @@ Configuration d'un WAGO
 
 Dans cette partie, je vais parler de la configuration du plugin pour un automate WAGO 750-x
 
+L'adressage :
+------------
 Petite explication sur l'adressage WAGO. Nous ne parlerons ici que des Entrées %I, des Sorties %Q et des mémoires %M
 Chacune de ces adresses peut être lue et/ou écrite sous forme de bit (0 ou 1) ou de mot (16 bits = de 0 à 65535)
 
