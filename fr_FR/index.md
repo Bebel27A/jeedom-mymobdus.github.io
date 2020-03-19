@@ -105,6 +105,7 @@ Chacune de ces adresses peut être lue et/ou écrite sous forme de bit (0 ou 1) 
 
 ![WAGO](../images/WAGO_adr.jpg)
 
+
 Dans ce document, vous voyez d'autres informations, comme des Byte ou Double word, mais ça ne sera pas utilisé pour le ModBus. Nous utilisons donc les I, Q et M, ainsi que les X et W.
 
 Exemple, pour la première entrée, on peut avoir soit %IW0 (16 bits) soit %IX0.0, %IX0.1, ... , %IX0.15 (soit les 16 bits du mot, mais adressable un par un)
