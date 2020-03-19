@@ -143,6 +143,7 @@ Bon allez, pour vous simplifier la tâche, j'ai créé un document excel pour le
 [ici](https://github.com/Bebel27A/jeedom-mymobdus.github.io/blob/master/fr_FR/WAGO_adressage.xlsx)
 
 - **Voilà, maintenant vous connaissez l'adressage, on va entrer dans le vif du sujet**
+
 Configuration :
 ---------------
 Nous avons donc notre Jeedom, notre Wago, ils communiquent via le plugin. Parfait !
