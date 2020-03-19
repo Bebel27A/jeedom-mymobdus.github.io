@@ -190,7 +190,8 @@ Pour celà, dans Resources/Global variables je crée un nouveau fichiers de vari
 > vrt_LUM_Salle_Spots1 AT %MX3.1 : BOOL;
 
 
-Pour vous aider, dans le fichier excel, vous trouverez un 4è onglet, qui crée directement les syntaxes, plus qu'à copier-coller ou adapter.
+> **Tip**
+>Pour vous aider, dans le fichier excel, vous trouverez un 4è onglet, qui crée directement les syntaxes, plus qu'à copier-coller ou adapter.
 
 
 Voilà, nous avons maintenant des *interrupteurs* virtuels appelé vrt_LUM_Salle_Sports1 dans mon exemple. On peut donc l'utiliser dans le code.
