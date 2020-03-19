@@ -137,8 +137,8 @@ J'espère que vous avez suivi, car avec le modbus, on ne peut pas lire un %QX, o
 
 Et pour couronner le tout, %QW0 a l'adresse 512, %QW1 a l'adresse 513, ... 
 
-Bon allez, pour vous simplifier la tâche, j'ai créé un document excel pour les premières adresses, vous le trouverez ici : 
-(https://github.com/Bebel27A/jeedom-mymobdus.github.io/blob/master/fr_FR/WAGO_adressage.xlsx)
+Bon allez, pour vous simplifier la tâche, j'ai créé un document excel pour les premières adresses, vous le trouverez : 
+[ici](https://github.com/Bebel27A/jeedom-mymobdus.github.io/blob/master/fr_FR/WAGO_adressage.xlsx)
 
 - **Voilà, maintenant vous connaissez l'adressage, on va entrer dans le vif du sujet**
 
