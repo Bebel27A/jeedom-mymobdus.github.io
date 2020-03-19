@@ -103,7 +103,39 @@ Dans cette partie, je vais parler de la configuration du plugin pour un automate
 Petite explication sur l'adressage WAGO. Nous ne parlerons ici que des Entrées %I, des Sorties %Q et des mémoires %M
 Chacune de ces adresses peut être lue et/ou écrite sous forme de bit (0 ou 1) ou de mot (16 bits = de 0 à 65535)
 
+![WAGO](../images/WAGO_adr.jpg)
+Dans ce document, vous voyez d'autres informations, comme des Byte ou Double word, mais ça ne sera pas utilisé pour le ModBus. Nous utilisons donc les I, Q et M, ainsi que les X et W.
+
 Exemple, pour la première entrée, on peut avoir soit %IW0 (16 bits) soit %IX0.0, %IX0.1, ... , %IX0.15 (soit les 16 bits du mot, mais adressable un par un)
+
+
+Parlons modbus, nous avons dans le module 2 "data type":
+![WAGO](../images/WAGO_types_reg.jpg)
+
+Pour le moment, je n'ai pas trouvé la différence entre Input Register et Holding Register, ni entre Coils et Discrete Imputs, et j'ai réussi à tout faire avec Coils et Holding Register, donc je ne parlerais que de ces 2 types.
+
+Comment trouver les adresses ModBus correspondant aux %I, %Q, %M ? 
+![WAGO](../images/WAGO_exemple.jpg)
+
+Donc pour simplifier : 
+- %IX0.0 -> %IX31.15 ont les adresses 0 à 511
+- %MX0.0 -> %MX1279.15 ont les adresses de 12888 à 32750
+Je ne parle pas des %QX car c'est un peu particulier et j'en parle après.
+
+Maintenant ça va devenir plus compliqué, on va parler des mots et meme si les mots permettent de lire les mmêmes informations, les adresses sont différentes.
+Par exemple, si je veux QX0.3, ça correspond au 4è bit sur mot de sortie 0, soit %QW0 bit 3.
+
+J'espère que vous avez suivi, car avec le modbus, on ne peut pas lire un %QX, on doit lire un %QW et ensuite séparer chaque bit dans un virtuel comme indiqué plus haut dans cette documentation.
+
+Et pour couronner le tout, %QW0 a l'adresse 512, %QW1 à l'adresse 513, ... 
+
+Bon allez, pour vous simplifier la tâche, j'ai créé un document excel pour les premières adresses, vous le trouverez ici : 
+https://github.com/Bebel27A/jeedom-mymobdus.github.io/blob/master/fr_FR/WAGO_adressage.xlsx
+
+**Voilà, maintenant vous connaissez l'adressage, on va entrer dans le vif du sujet**
+
+
+
 
 
 (Travail en cours, ça prendra 1 ou 2 jours, revenez voir bientot)
