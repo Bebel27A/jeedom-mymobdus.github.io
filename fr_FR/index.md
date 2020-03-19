@@ -174,10 +174,76 @@ Par contre, vous vous en doutez, ça ne suffit pas, ici on met juste les variabl
 
 Il faut maintenant adapter le programme de l'automate dans CodeSys
 
+*Première chose à faire:* déclarer les %MX en tant que variables.
+Pour celà, dans Resources/Global variables je crée un nouveau fichiers de variables que j'ai appelé Variables_virtuelles
 
+Dedans, il faut déclarer tous les %MX et %MW utilisé : 
+> vrt_LUM_Salle_Spots1 AT %MX3.1 : BOOL;
 
+Pour vous aider, dans le fichier excel, vous trouverez un 4è onglet, qui crée directement les syntaxes, plus qu'à copier-coller ou adapter.
 
-(Travail en cours, ça prendra 1 ou 2 jours, revenez voir bientot)
+Voilà, nous avons maintenant des *interrupteurs* virtuels appelé vrt_LUM_Salle_Sports1 dans mon exemple. On peut donc l'utiliser dans le code.
+
+Dans l'exmple qui suit, je parle de la config chez moi, donc il faut l'adpater pour vous. 
+Je code en ST dans CodeSys, donc désolé pour ceux qui préfère le Ladder ou autre
+```(* Salle *)
+        (*  Virtuels  *)
+		vrt_temp_salle_spots1 := FALSE;
+		IF (vrt_LUM_Salle_Spots1_On) THEN
+			IF (NOT LUM_Salle_Spots1) THEN
+				vrt_temp_salle_spots1:=TRUE;
+			END_IF
+		END_IF
+		IF (vrt_LUM_Salle_Spots1_Off) THEN
+			IF (LUM_Salle_Spots1) THEN
+				vrt_temp_salle_spots1:=TRUE;
+			END_IF
+		END_IF
+
+input_Lum_Salle_Spots1:=simple_INT_Salle_TV_1 OR simple_INT_Salle_Esc_Lum_G OR simple_INT_Coul_Chaud_1 OR simple_INT_Salle_Ecran_Lum_G OR simple_INT_Salle_Cuis_G OR vrt_LUM_Salle_Spots1 OR vrt_temp_salle_spots1;
+
+SW_LUM_Salle_Spots1(Interrupteur:=input_Lum_Salle_Spots1); LUM_Salle_Spots1:=SW_LUM_Salle_Spots1.Lampe;
+```
+
+Un peu d'explications : ma sortie physique s'appelle LUM_Salle_Spots1 (elle est assigné dans la configuration physique de l'automate dans CodeSys).
+Maintenant, je vais prendre le code à l'envers pour une meilleure compréhension :
+
+SW_LUM_Salle_Spots1 est un switch, en gros ça inverse juste l'état si l'`Interrupteur` en paramètre est à TRUE.
+Et ma sortie LUM_Salle_Spots1 est donc positionné sur la sortie `Lampe`de ce switch.
+
+Ensuite la variable input_Lum_Salle_Sports1, c'est en fait mon `Interrupteur` dont on a parlé plus haut, mais comme j'ai dans la pièce plusieurs interrupteurs physiques, plus des interrupteurs virtuels, je fais juste un simple `OR` avec tous ces interrupteurs.
+*(pour ceux qui sont intrigué, j'ai simple_ pour un simple click, double_ pour un double click, triple_ pour un triple click et long_ pour un appuis long, mais ça n'a rien à voir avec le sujet)*
+
+Dans cette chaine de `OR`, vous trouvez à la fin 2 virtuels : 
+* vrt_LUM_Salle_Spots1 : qui est le %MX3.4 dont on a parlé plus haut
+* vrt_temp_salle_spots1 : qui est une variable locale à ce programme qui est initialisé juste au dessus et que j'explique juste après.
+
+A quoi servent ces 2 virtuels : 
+* vrt_LUM_Salle_Spots1 sert à simuler un simple appuis sur l'interrupteur, donc même fonctionnement qu'un interrupteur physique.
+* vrt_temp_salle_spots1 permet de traiter le ON et le OFF pour forcer l'allumage ou l'extinction.
+
+Comment fonctionne le ON et le OFF
+Ca se fait dans le premier bout de code 
+```
+        (*  Virtuels  *)
+		vrt_temp_salle_spots1 := FALSE;
+		IF (vrt_LUM_Salle_Spots1_On) THEN
+			IF (NOT LUM_Salle_Spots1) THEN
+				vrt_temp_salle_spots1:=TRUE;
+			END_IF
+		END_IF
+		IF (vrt_LUM_Salle_Spots1_Off) THEN
+			IF (LUM_Salle_Spots1) THEN
+				vrt_temp_salle_spots1:=TRUE;
+			END_IF
+		END_IF
+```
+En gros, si on veut faire un ON, on doit juste faire quelque chose si la lumière est éteinte, et dans ce cas on simule un appuis sur l'interrupteur temp.
+Idem pour le OFF, on ne doit faire quelquechose que si la lumière est allumée, et dans ce cas c'est aussi une simulation d'appuis sur l'interrupteur temp.
+
+Voilà, vous savez tout maintenant sur la configuration de MyModBus pour les automates WAGO.
+
+(Cette partie sur WAGO a été faite par Vincent VAURETTE @vvaurette)
 
 
 
