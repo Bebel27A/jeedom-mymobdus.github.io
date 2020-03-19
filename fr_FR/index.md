@@ -187,10 +187,11 @@ Pour celà, dans Resources/Global variables je crée un nouveau fichiers de vari
 
 
 - Dedans, il faut déclarer tous les %MX et %MW utilisé : 
-> vrt_LUM_Salle_Spots1 AT %MX3.1 : BOOL;
+vrt_LUM_Salle_Spots1 AT %MX3.1 : BOOL;
 
 
 > **Tip**
+>
 >Pour vous aider, dans le fichier excel, vous trouverez un 4è onglet, qui crée directement les syntaxes, plus qu'à copier-coller ou adapter.
 
 
