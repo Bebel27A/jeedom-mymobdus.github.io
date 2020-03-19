@@ -106,6 +106,8 @@ Chacune de ces adresses peut être lue et/ou écrite sous forme de bit (0 ou 1) 
 Exemple, pour la première entrée, on peut avoir soit %IW0 (16 bits) soit %IX0.0, %IX0.1, ... , %IX0.15 (soit les 16 bits du mot, mais adressable un par un)
 
 
+(Travail en cours, ça prendra 1 ou 2 jours, revenez voir bientot)
+
 
 
 FAQ
