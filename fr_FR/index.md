@@ -163,14 +163,14 @@ Et pour écrire les %MX (le principe est le même pour les MW)
 
 Voilà, avec ça vous pouvez lire les entrées & sorties, ainsi qu'écrire les MX
 Quelques explications sur mes MX, ici j'ai voulu tester 3 fonctions avec la lampe de test que j'ai a côté de moi.
-1-Simuler l'appuis sur l'interrupteur
-2-Forcer l'extinction
-3-Forcer l'allumage
+1. Simuler l'appuis sur l'interrupteur
+1. Forcer l'extinction
+1. Forcer l'allumage
 
 Par contre, vous vous en doutez, ça ne suffit pas, ici on met juste les variables suivantes à 1 puis 0 (simuler un appuis sur interrupteur virtuel)
--Addr 12337 -> %MX3.4  (pour simuler l'appuis sur l'interrupteur de la pièce)
--Addr 12352 -> %MX4.0  (pour forcer l'allumage de la lampe Spots1)
--Addr 12353 -> %MX4.1  (pour forcer l'extinction)
+1. Addr 12337 -> %MX3.4  (pour simuler l'appuis sur l'interrupteur de la pièce)
+1. Addr 12352 -> %MX4.0  (pour forcer l'allumage de la lampe Spots1)
+1. Addr 12353 -> %MX4.1  (pour forcer l'extinction)
 
 Il faut maintenant adapter le programme de l'automate dans CodeSys
 
