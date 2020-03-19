@@ -198,21 +198,20 @@ Voilà, nous avons maintenant des *interrupteurs* virtuels appelé vrt_LUM_Salle
 - Dans l'exemple qui suit, je parle de la config chez moi, donc il faut l'adpater pour vous. 
 Je code en ST dans CodeSys, donc désolé pour ceux qui préfère le Ladder ou autre
 
-> **Tip**
->	(* Salle *)
->	        (*  Virtuels  *)
->			vrt_temp_salle_spots1 := FALSE;
->			IF (vrt_LUM_Salle_Spots1_On) THEN
->				IF (NOT LUM_Salle_Spots1) THEN
->					vrt_temp_salle_spots1:=TRUE;
->				END_IF
->			END_IF
->			IF (vrt_LUM_Salle_Spots1_Off) THEN
->				IF (LUM_Salle_Spots1) THEN
->					vrt_temp_salle_spots1:=TRUE;
->				END_IF
->			END_IF
->		
+	(* Salle *)
+	        (*  Virtuels  *)
+			vrt_temp_salle_spots1 := FALSE;
+			IF (vrt_LUM_Salle_Spots1_On) THEN
+				IF (NOT LUM_Salle_Spots1) THEN
+					vrt_temp_salle_spots1:=TRUE;
+				END_IF
+			END_IF
+			IF (vrt_LUM_Salle_Spots1_Off) THEN
+				IF (LUM_Salle_Spots1) THEN
+					vrt_temp_salle_spots1:=TRUE;
+				END_IF
+			END_IF
+		
 	input_Lum_Salle_Spots1:=simple_INT_Salle_TV_1 OR simple_INT_Salle_Esc_Lum_G OR simple_INT_Coul_Chaud_1 OR simple_INT_Salle_Ecran_Lum_G OR simple_INT_Salle_Cuis_G OR vrt_LUM_Salle_Spots1 OR vrt_temp_salle_spots1;
 
 	SW_LUM_Salle_Spots1(Interrupteur:=input_Lum_Salle_Spots1); LUM_Salle_Spots1:=SW_LUM_Salle_Spots1.Lampe;
