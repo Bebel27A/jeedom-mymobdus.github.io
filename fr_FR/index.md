@@ -126,6 +126,7 @@ Donc pour simplifier :
 - %MX0.0 -> %MX1279.15 ont les adresses de 12888 à 32750
 Je ne parle pas des %QX car c'est un peu particulier et j'en parle après.
 
+
 Maintenant ça va devenir plus compliqué, on va parler des mots et meme si les mots permettent de lire les mmêmes informations, les adresses sont différentes.
 Par exemple, si je veux QX0.3, ça correspond au 4è bit sur mot de sortie 0, soit %QW0 bit 3.
 
