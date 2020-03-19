@@ -104,17 +104,20 @@ Petite explication sur l'adressage WAGO. Nous ne parlerons ici que des Entrées 
 Chacune de ces adresses peut être lue et/ou écrite sous forme de bit (0 ou 1) ou de mot (16 bits = de 0 à 65535)
 
 ![WAGO](../images/WAGO_adr.jpg)
+
 Dans ce document, vous voyez d'autres informations, comme des Byte ou Double word, mais ça ne sera pas utilisé pour le ModBus. Nous utilisons donc les I, Q et M, ainsi que les X et W.
 
 Exemple, pour la première entrée, on peut avoir soit %IW0 (16 bits) soit %IX0.0, %IX0.1, ... , %IX0.15 (soit les 16 bits du mot, mais adressable un par un)
 
 
 Parlons modbus, nous avons dans le module 2 "data type":
+
 ![WAGO](../images/WAGO_types_reg.jpg)
 
 Pour le moment, je n'ai pas trouvé la différence entre Input Register et Holding Register, ni entre Coils et Discrete Imputs, et j'ai réussi à tout faire avec Coils et Holding Register, donc je ne parlerais que de ces 2 types.
 
 Comment trouver les adresses ModBus correspondant aux %I, %Q, %M ? 
+
 ![WAGO](../images/WAGO_exemple.jpg)
 
 Donc pour simplifier : 
