@@ -1,5 +1,8 @@
 ### Changelog MYMODBUS 
 
+# 21/03/2020 V1.4.3
+-Ajout configuration pour automate Wago 
+
 # 15/03/2020 V1.4.2
 -Mise à jour du script des dépendances V1.3
 
