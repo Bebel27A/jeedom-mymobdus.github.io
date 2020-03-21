@@ -100,9 +100,11 @@ Filtre pour un octet :
 
 Vous trouverez ci dessous un exemple de virtuel pour extraire le premier octet d'un registre :
 - Partie configuration :
-![virtuel_0](../images/filtre_0.png)
+
+![virtuel_0](../images/filtre_1.png)
 - Voilà ce que ca donne dans l'ordre :
-![virtuel_1](../images/filtre_1.jpg)
+
+![virtuel_1](../images/filtre_0.jpg)
 
 Configuration d'un WAGO
 ===
