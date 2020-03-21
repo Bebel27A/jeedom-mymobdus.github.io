@@ -95,8 +95,14 @@ Il faut maintenant créer les commandes du virtuel pour cela on s’appuie sur c
 
 ![Config1_Crouzet](../images/action_virtuel.png)
 
+Filtre pour un octet :
+---------------------- 
 
-
+Vous trouverez ci dessous un exemple de virtuel pour extraire le premier octet d'un registre .
+-Partie configuration 
+![virtuel_0](../images/filtre_0.png)
+-Voilà ce que ca donne dans l'ordre 
+![virtuel_1](../images/filtre_1.jpg)
 
 Configuration d'un WAGO
 ===
