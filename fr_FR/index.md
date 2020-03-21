@@ -98,8 +98,10 @@ Il faut maintenant créer les commandes du virtuel pour cela on s’appuie sur c
 Filtre pour un octet :
 ---------------------- 
 
-Vous trouverez ci dessous un exemple de virtuel pour extraire le premier octet d'un registre :
+
 - Partie configuration :
+	mettre le registre que vous voulez lire et utiliser la fonction ( and & et ) et le numéro du bit que vous voulez récuperer en multiple de 2 .
+	Voir l'exmemple ci dessous .
 
 ![virtuel_0](../images/filtre_1.jpg)
 - Voilà ce que ca donne dans l'ordre :
