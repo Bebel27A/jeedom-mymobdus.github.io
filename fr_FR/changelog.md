@@ -1,6 +1,9 @@
 ### Changelog MYMODBUS 
 
 # 23/03/2020 V1.4.4
+-mise à jour page configuration , ajout des équipements en paramétre.
+
+# 23/03/2020 V1.4.4
 -Ajout page santée
 
 # 21/03/2020 V1.4.3
