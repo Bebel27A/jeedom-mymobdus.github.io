@@ -1,5 +1,8 @@
 ### Changelog MYMODBUS 
 
+# 09/04/2020 V1.4.5
+-Mise à jour Logo ..... Merci alois.myard pour cette création 
+
 # 23/03/2020 V1.4.4
 -mise à jour page configuration , ajout des équipements en paramétre.
 
