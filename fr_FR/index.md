@@ -13,6 +13,8 @@ Configuration du plugin
 
 Après téléchargement du plugin, il vous suffit juste d’activer et d’installer les dépendances Mymodbus (clic sur le bouton Installer/Mettre à jour)
 
+Attention le démond démarre seulement s'il y a un équiment de présent !!
+
 ![Config1_Crouzet](../images/plugin_ok.png)
 
 
