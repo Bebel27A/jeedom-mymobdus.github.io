@@ -1,36 +1,36 @@
 ### Changelog MYMODBUS 
 
 # 01/06/2020 V2.0
--Passage en python3 necessite une mise à jour des dépendances
--Possibilité de filtrer directement des bits dans le plugin, sans passer par des virtuels
--Ajout de la lecture de float et de int en holding register 
+- Passage en python3 necessite une mise à jour des dépendances
+- Possibilité de filtrer directement des bits dans le plugin, sans passer par des virtuels
+- Ajout de la lecture de float et de int en holding register 
 
 # 09/04/2020 V1.4.5
--Mise à jour Logo ..... Merci alois.myard pour cette création 
+- Mise à jour Logo ..... Merci alois.myard pour cette création 
 
 # 23/03/2020 V1.4.4
--mise à jour page configuration , ajout des équipements en paramétre.
+- mise à jour page configuration , ajout des équipements en paramétre.
 
 # 23/03/2020 V1.4.4
--Ajout page santée
+- Ajout page santée
 
 # 21/03/2020 V1.4.3
--Ajout configuration pour automate Wago 
+- Ajout configuration pour automate Wago 
 
 # 15/03/2020 V1.4.2
--Mise à jour du script des dépendances V1.3
+- Mise à jour du script des dépendances V1.3
 
 # 05/03/2020 V1.4.1
--Mise à jour du logo au standard officiel.
+- Mise à jour du logo au standard officiel.
 
 # 23/02/2020 V1.4.0
--Ajout compatibilité Jeedom en V3.3 ( suite test fais en V3.3 ) 
+- Ajout compatibilité Jeedom en V3.3 ( suite test fais en V3.3 ) 
 
 # 09/02/2020 V1.3.2
--Ajout Python PIP dans le script d'installation des dépendances. (Suite problème remonté sur Community par @hitaki)
+- Ajout Python PIP dans le script d'installation des dépendances. (Suite problème remonté sur Community par @hitaki)
 
 # 03/02/2020 V1.3.1
--Suppression du time out sur la gestion du port de com , car il entrainait des erreurs de lecture
+- Suppression du time out sur la gestion du port de com , car il entrainait des erreurs de lecture
 
 # 22/01/2020 V1.3
 - Résolution du bug sur le retour des valeurs, des équipements à IP commune.
