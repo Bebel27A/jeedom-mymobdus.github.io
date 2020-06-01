@@ -1,5 +1,10 @@
 ### Changelog MYMODBUS 
 
+# 01/06/2020 V2.0
+-Passage en python3 necessite une mise à jour des dépendances
+-Possibilité de filtrer directement des bits dans le plugin, sans passer par des virtuels
+-Ajout de la lecture de float et de int en holding register 
+
 # 09/04/2020 V1.4.5
 -Mise à jour Logo ..... Merci alois.myard pour cette création 
 
