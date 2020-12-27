@@ -1,9 +1,12 @@
 ### Changelog MYMODBUS 
 
-# 22/06/2020 V2.1
-- Ajout d'un mode pour la lecture des  imputs_registers des compteurs de puissances Eastrom
+# 28/12/2020 V2.1.1 b
+- Mise à jour du script d'écriture pour python 3(version beta)
 
-# 01/06/2020 V2.0
+# 22/06/2020 V2.1 b
+- Ajout d'un mode pour la lecture des  imputs_registers des compteurs de puissances Eastrom (version beta)
+
+# 01/06/2020 V2.0 b
 - Passage en python3 necessite une mise à jour des dépendances
 - Possibilité de filtrer directement des bits dans le plugin, sans passer par des virtuels
 - Ajout de la lecture de float et de int en holding register 
