@@ -1,5 +1,8 @@
 ### Changelog MYMODBUS 
 
+# 04/01/2021 V2.1.2 b
+- ajout écriture multiple register fonction 16 
+
 # 28/12/2020 V2.1.1 b
 - Mise à jour du script d'écriture pour python 3(version beta)
 
