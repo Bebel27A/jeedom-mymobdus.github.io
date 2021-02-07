@@ -1,7 +1,10 @@
 ### Changelog MYMODBUS 
 
+# 07/02/2021 V2.2.0 b
+- ajout gestion des démons 
+
 # 04/01/2021 V2.1.2 b
-- ajout écriture multiple register fonction 16 
+- ajout écriture multiples registers fonction 16 
 
 # 28/12/2020 V2.1.1 b
 - Mise à jour du script d'écriture pour python 3(version beta)
