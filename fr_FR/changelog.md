@@ -1,5 +1,8 @@
 ### Changelog MYMODBUS 
 
+# 06/03/2021 V2.2.2 b
+- ajout gestion du rtu (test) 
+
 # 07/02/2021 V2.2.0 b
 - ajout gestion des démons 
 
