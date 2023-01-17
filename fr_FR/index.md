@@ -4,7 +4,7 @@ Présentation
 Le Plugin MyModBus sert à communiquer en protocole Modbus via plusieurs types de Liaison.
 
 	- Liaison modbus Ethernet
-	- Liaison Série Mode RTU ( A venir )
+	- Liaison Série Mode RTU 
 
 Il est compatible avec plusieurs types d’automates (Crouzet, IPX  , Wago …)
 
