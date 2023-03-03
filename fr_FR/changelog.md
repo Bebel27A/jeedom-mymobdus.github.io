@@ -1,7 +1,7 @@
 ### Changelog MYMODBUS 
 
 # 17/03/2021 V2.2.3 b
-- ajout option dans la page de config pour redememarrer les demons si Nok 
+- ajout options dans la page de configuration pour redememarrer les demons si Nok 
 
 # 06/03/2021 V2.2.2 b
 - ajout gestion du rtu (test) 
