@@ -1,4 +1,10 @@
-### Changelog MYMODBUS 
+### Changelog MYMODBUS STABLE
+
+# 08/03/2023 V2.3 s
+
+- Passage de la version beta en stable , il faudra impérativement  relancer les dépendances !
+- Par sécurité avant de faire la mise à jour ,vous pouvez faire un backup de votre installtion. 
+ 
 
 # 17/03/2021 V2.2.3 b
 - ajout options dans la page de configuration pour redememarrer les demons si Nok 
