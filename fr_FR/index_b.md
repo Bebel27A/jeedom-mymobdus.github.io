@@ -29,7 +29,7 @@ Le protocole Modbus est basé sur une norme qui ne sera pas détaillée ici. Vou
 ## Organisation de la mémoire
 
 Dans tout appareil équipé de mémoire, celle-ci est organisées par adresses. Les adresses de registres accessibles
-via Modbus sont organisées de sorte de se succéder dans différentes partie de la zone mémoire.  
+via Modbus sont organisées de sorte de se succéder dans différentes parties de la zone mémoire.  
 Il faut s'imaginer les registres, les uns à la suite des autres, comme des "cases mémoire" bien rangées.
 
 Par exemple, pour la zone mémoire de la mémoire interne des automates Wago, les premières adresses sont organisées
@@ -48,7 +48,8 @@ C'est une gymnastique qu'il faut essayer d'apprendre, mais tous les appareils ne
 L'installation se fait via le market, comme tous les plugins Jeedom. Une fois téléchargé, MyModbus installe ses
 dépendances, cette étape peut durer plusieurs dizaines de minutes en fonction de la bande passante disponible et
 des capacités de votre machine.  
-Il est fortement conseillé de désactiver la gestion automatique du démon durant l'installation afin que le démon
+En cas de mise à jour depuis une ancienne version, il est fortement conseillé de désactiver les équipements avant
+de lancer la mise à jour et de désactiver la gestion automatique du démon durant l'installation afin que le démon
 ne soit pas démarré par Jeedom sans que MyModbus ne soit installé complètement.
 
 Ici, on peut constater que l'installation de MyModbus sur un Raspberry PI 3B peut durer vraiment longtemps :  
