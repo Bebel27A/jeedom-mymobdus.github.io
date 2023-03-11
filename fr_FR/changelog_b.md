@@ -1,5 +1,8 @@
 ### Changelog MYMODBUS BETA
 
+# 10/03/2023 V2.0 beta1
+- Réécriture complète du plugin afin de gérer un maximum de modes et de formats de données
+
 # 22/01/2020 V1.3
 - Résolution du bug sur le retour des valeurs, des équipements à IP commune.
 
