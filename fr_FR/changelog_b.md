@@ -1,5 +1,17 @@
 ### Changelog MYMODBUS BETA
 
+TODO :
+- Templates : exporter, importer (en json) et éventuellement éditer des templates
+
+
+# 16/03/2023 V2.0 beta2
+- Correction de l'installation des dépendances
+- Logging au niveau paramétré dans Jeedom, même pour le démon
+- Ajout de l'ID dans les commandes
+- Ecriture au moment où la commande est lancée dans Jeedom et plus à la fin du cycle (polling)
+- Possibilité de rajouter un temps d'attente après l'écriture d'une valeur fixe
+- Plus d'informations sont loggées en cas d'exception lors des lectures et écritures
+
 # 10/03/2023 V2.0 beta1
 - Réécriture complète du plugin afin de gérer un maximum de modes et de formats de données
 
