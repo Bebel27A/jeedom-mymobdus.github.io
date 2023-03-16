@@ -2,7 +2,7 @@
 
 TODO :
 - Templates : exporter, importer (en json) et éventuellement éditer des templates
-
+- Lecture d'une plage d'adresses en une fois et assignation indirecte des commandes info
 
 # 16/03/2023 V2.0 beta2
 - Correction de l'installation des dépendances
