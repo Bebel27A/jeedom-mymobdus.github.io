@@ -6,6 +6,10 @@
 - Passer le niveau de log à la volée en cas de changement
 - Passer les modifications de configuration à la volée lors de la sauvegarde sans redémarrer le démon
 - Tester si une lecture cyclique sans pause (polling = 0) fonctionne et ne génère pas une charge trop importante
+- Permettre 3 types de lectures :
+  - Polling toutes les x secondes (comme actuellement)
+  - Cyclique sans pause entre les cycles
+  - Sur déclenchement
 - Documentation :
   - Ajouter la méthode pour la mise à l'heure des automates Crouzet et Zelio
 
