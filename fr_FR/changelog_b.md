@@ -5,6 +5,7 @@
 - Lecture d'une plage d'adresses en une fois et assignation indirecte des commandes info (en cours)
 - Passer le niveau de log à la volée en cas de changement
 - Passer les modifications de configuration à la volée lors de la sauvegarde sans redémarrer le démon
+- Tester si une lecture cyclique sans pause (polling = 0) fonctionne et ne génère pas une charge trop importante
 - Documentation :
   - Ajouter la méthode pour la mise à l'heure des automates Crouzet et Zelio
 
