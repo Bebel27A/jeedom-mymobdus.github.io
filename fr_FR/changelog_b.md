@@ -11,9 +11,10 @@
   - Sur déclenchement
 - Documentation :
   - Ajouter la méthode pour la mise à l'heure des automates Crouzet et Zelio
+  - Documenter les nouvelles fonctionnalités
 
 ## 17/03/2023 V2.0 beta3
-- Correction du bug qui supprimait toutes les commandes au moment de saauvegarder la configuration d'un équipement
+- Correction du bug qui supprimait toutes les commandes au moment de sauvegarder la configuration d'un équipement
 
 ## 16/03/2023 V2.0 beta2
 - Correction de l'installation des dépendances
