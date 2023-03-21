@@ -241,6 +241,7 @@ Pour comprendre cette partie, il faut un peu de théorie :
 | uint                  | Entier positif            |
 | float                 | Nombre flottant (réel)    |
 | chaine de caractères  | Chaine de caractères      |
+| plage de registres    | Plage de registres        |
 | SunSpec scale factor  | Type spécifique à SunSpec |
 
 Pour les types int, uint et float, le démon MyModbus lira le bon nombre de registres en fonction du nombre de bits sur
@@ -249,14 +250,29 @@ lesquels sont codées les variables. L'adresse de ces variables doit être un no
 Pour une chaine de caractères, l'adresse doit être renseignée comme ceci : 'adresse_début [longueur]'.
 Par exemple '20406 [32]' pour une chaine de caractère de 32 caractères qui commence à l'adresse 20406.
 
-Dans les appareils de la marque SunSpec, certaines mesures sont codées avec deux registres : 'registre1 * 10^registre2'.
-Pour ces types de variable, l'adresse doit être renseignée comme ceci : 'registre1 sf registre2', par exemple
-'40036 sf 40045'.
+Une plage de registres correspond à un groupe de plusieurs registres à lire en une requête. L'adresse est au même format
+que pour une chaîne de caractères à savoir 'adresse_début [longueur]'. La nombre maximal de registres lisibles en une
+requête dépend du matériel et est généralement documenté. Une commande de ce type a une valeur '1' si la requête est
+exécutée sans erreur. Sinon elle prend la valeur '0'.  
+Pour extraire une valeur de cette plage de registres, les autres commande doivent être configurée avec une requête
+'Depuis une plage de données'. Un champs devant contenir le nom de la commande qui lit la plage concernée doit être
+renseigné et le champs d'adresse est identique à ce qui doit être configuré pour une commande standard.  
+Attention à faire en sorte que le registre soit effectivement dans la plage de lecture.
+
+> :memo: ***Remarque***  
+> Une communication Modbus avec un minimum de requêtes est bien plus performante et moins gourmande en ressources si
+> le nombre de requêtes est limité au minimum. Il est vivement conseillé d'utiliser les plages de registres, même si
+> une plage est définie juste pour 2 ou 3 commandes.
+
+Dans les appareils utilisant la norme SunSpec, certaines mesures sont codées avec deux registres :
+'registre1 * 10^registre2'. Pour ces types de variable, l'adresse doit être renseignée comme ceci :
+'registre1 sf registre2', par exemple '40036 sf 40045'. Si la puissance de 10 se trouve à une adresse avant celui de
+la valeur ('40223 sf 40210' par exemple) il faut passer par une plage de registres.
 
 > :memo: ***Remarque***  
 > Les variables spécifiques à SunSpec auraient pu être lues en deux commandes et calculées via un virtuel.
-> Comme SunSpec fabrique également des cartes pour d'autres fabricants, il a été décidé d'inclure leur type spécial
-> puisque ce type pourrait se retrouver dans d'autres appareils. Si d'autres types spéciaux devaient être inclus dans
+> Comme SunSpec est une norme assez largement utilisée, il a été décidé d'inclure ce type spécial
+> puisque il pourrait être utilisé dans différents appareils. Si d'autres types spéciaux devaient être inclus dans
 > MyModbus, vous pouvez en faire la demande sur le forum Community en précisant bien le tag `#plugin-mymodbus`.
 
 ### Inverser les octets ou les mots

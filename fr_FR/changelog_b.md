@@ -2,7 +2,7 @@
 
 ## TODO
 - Templates : exporter, importer (en json) et éventuellement éditer des templates
-- Commande action avec la valeur d'une commende Jeedom en tant que valeur
+- Commande action avec la valeur d'une commande Jeedom en tant que valeur
 - Passer le niveau de log à la volée en cas de changement
 - Passer les modifications de configuration à la volée lors de la sauvegarde sans redémarrer le démon
 - Liste déroulante pour le choix de la plage de registres
@@ -14,7 +14,11 @@
   - Ajouter la méthode pour la mise à l'heure des automates Crouzet et Zelio
   - Documenter les nouvelles fonctionnalités
 
-## 17/03/2023 V2.0 beta3
+## 17/03/2023 V2.0 beta5
+- Lecture d'une plage d'adresses en une fois et assignation indirecte des commandes info :
+Version avec une configuration permettant une meilleure compatibilité (à documenter)
+
+## 17/03/2023 V2.0 beta4
 - Lecture d'une plage d'adresses en une fois et assignation indirecte des commandes info (à documenter)
 
 ## 17/03/2023 V2.0 beta3
