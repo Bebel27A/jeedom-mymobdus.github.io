@@ -14,7 +14,7 @@
   - Ajouter la méthode pour la mise à l'heure des automates Crouzet et Zelio
   - Documenter les nouvelles fonctionnalités
 
-## 17/03/2023 V2.0 beta5
+## 21/03/2023 V2.0 beta5
 - Lecture d'une plage d'adresses en une fois et assignation indirecte des commandes info :
 Version avec une configuration permettant une meilleure compatibilité (à documenter)
 
