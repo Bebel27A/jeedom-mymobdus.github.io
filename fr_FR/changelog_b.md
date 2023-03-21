@@ -16,9 +16,9 @@
 
 ## 21/03/2023 V2.0 beta5
 - Lecture d'une plage d'adresses en une fois et assignation indirecte des commandes info :
-Version avec une configuration permettant une meilleure compatibilité (à documenter)
+Version avec une configuration permettant une meilleure compatibilité
 
-## 17/03/2023 V2.0 beta4
+## 19/03/2023 V2.0 beta4
 - Lecture d'une plage d'adresses en une fois et assignation indirecte des commandes info (à documenter)
 
 ## 17/03/2023 V2.0 beta3

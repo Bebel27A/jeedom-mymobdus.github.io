@@ -254,9 +254,9 @@ Une plage de registres correspond à un groupe de plusieurs registres à lire en
 que pour une chaîne de caractères à savoir 'adresse_début [longueur]'. La nombre maximal de registres lisibles en une
 requête dépend du matériel et est généralement documenté. Une commande de ce type a une valeur '1' si la requête est
 exécutée sans erreur. Sinon elle prend la valeur '0'.  
-Pour extraire une valeur de cette plage de registres, les autres commande doivent être configurée avec une requête
-'Depuis une plage de données'. Un champs devant contenir le nom de la commande qui lit la plage concernée doit être
-renseigné et le champs d'adresse est identique à ce qui doit être configuré pour une commande standard.  
+Pour extraire une valeur de cette plage de registres, les autres commandes doivent être configurées avec une requête
+'Depuis une plage de données'. Un champs devant contenir le nom de la commande qui lit la plage concernée est à
+renseigner et le champs d'adresse est identique à ce qui doit être configuré pour une commande standard.  
 Attention à faire en sorte que le registre soit effectivement dans la plage de lecture.
 
 > :memo: ***Remarque***  
