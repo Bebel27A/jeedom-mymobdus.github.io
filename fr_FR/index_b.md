@@ -272,13 +272,13 @@ Attention à faire en sorte que le registre soit effectivement dans la plage de 
 
 Dans les appareils utilisant la norme SunSpec, certaines mesures sont codées avec deux registres :
 'registre1 * 10^registre2'. Pour ces types de variable, l'adresse doit être renseignée comme ceci :
-'registre1 sf registre2', par exemple '40036 sf 40045'. 'sf' pour 'scale factor'.Si la puissance de 10 se trouve à
+'registre1 sf registre2', par exemple '40036 sf 40045'. 'sf' pour 'scale factor'. Si la puissance de 10 se trouve à
 une adresse avant celle de la valeur ('40223 sf 40210' par exemple) il faut passer par une plage de registres.
 
 > :memo: ***Remarque***  
-> Les 'scale factor' auraient pu être lues en deux commandes et calculées via un virtuel.
+> Les 'scale factor' auraient pu être lus en deux commandes et calculés via un virtuel.
 > Comme SunSpec est une norme assez largement utilisée, il a été décidé d'inclure ce type spécial
-> puisque il pourrait être utilisé dans différents appareils. Si d'autres types spéciaux devaient être inclus dans
+> puisqu'il pourrait être utilisé dans différents appareils. Si d'autres types spéciaux devaient être inclus dans
 > MyModbus, vous pouvez en faire la demande sur le forum Community en précisant bien le tag `#plugin-mymodbus`.
 
 ### Inverser les octets ou les mots
