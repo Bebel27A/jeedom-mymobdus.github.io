@@ -302,7 +302,7 @@ Deux champs de paramétrages sont proposés :
 L'option de calcul permet d'appliquer un calcul à la valeur retournée par le démon. Cette option peut être utile pour
 une mise à l'échelle ou le filtrage d'un bit. Vous pouvez mettre dans ce champs le calcul que vous voulez, il suffit de
 saisir '#value#' et de respecter la syntaxe de php. Toutes les fonctions mathématiques de php sont disponibles.  
-Exemple : '(#value# + 7) * 3'
+Exemple : '(#value# + 7) * 3'  
 Si vous souhaitez extraire un bit d'un registre de 16 bits, vous pouvez utiliser la fonction d'aide en cliquant sur
 l'icône ![Icône](../images/Commande_aide_calcul.png) à droite du champs de saisie afin d'appeler la fenêtre suivante :  
 ![Icône](../images/Commande_fenêtre_aide_calcul.png)
