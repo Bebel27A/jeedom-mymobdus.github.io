@@ -248,11 +248,11 @@ Pour les types int, uint et float, le démon MyModbus lira le bon nombre de regi
 lesquels sont codées les variables. L'adresse de ces variables doit être un nombre.
 
 Pour une chaine de caractères, l'adresse doit être renseignée comme ceci : 'adresse_début [longueur]'.
-Par exemple '20406 [32]' pour une chaine de caractère de 32 caractères qui commence à l'adresse 20406.
+Par exemple '20406 [32]' pour une chaine de caractères de 32 caractères qui commence à l'adresse 20406.
 
 Une plage de registres correspond à un groupe de plusieurs registres à lire en une requête. L'adresse est au même format
-que pour une chaîne de caractères à savoir 'adresse_début [longueur]'. La nombre maximal de registres lisibles en une
-requête dépend du matériel et est généralement documenté. Une commande de ce type a une valeur '1' si la requête est
+que pour une chaine de caractères à savoir 'adresse_début [longueur]'. La nombre maximal de registres lisibles en une
+requête dépend du matériel et est généralement documenté. Une commande de ce type prend une valeur '1' si la requête est
 exécutée sans erreur. Sinon elle prend la valeur '0'.  
 Pour extraire une valeur de cette plage de registres, les autres commandes doivent être configurées avec une requête
 'Depuis une plage de données'. Un champs devant contenir le nom de la commande qui lit la plage concernée est à
