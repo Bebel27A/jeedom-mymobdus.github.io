@@ -348,7 +348,7 @@ Les options standards de Jeedom.
 Au moment de la sauvegarde d'un équipement et de ses commandes, la cohérence des paramètres est vérifiée. En cas
 d'erreur, la sauvegarde est invalidée et un message apparaît avec l'erreur.  
 La première ligne du message correspond au nom de l'équipement si l'erreur est sur l'équipement ou au nom de la
-commande qui a une erreur. Les messages sont assez explicites et les erreus doivent être corrigées pour que la
+commande qui a une erreur. Les messages sont assez explicites et les erreurs doivent être corrigées pour que la
 sauvegarde soit faite.
 
 Exemple d'erreur sur la configuration de l'équipement 'Equipement MyModbus' :  
