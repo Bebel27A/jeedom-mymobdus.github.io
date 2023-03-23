@@ -1,6 +1,7 @@
 # Changelog MyModbus beta
 
 ## TODO
+- Permettre un temps d'attente avant la première requête (compatibilité avec Huawei SUN2000)
 - Templates : exporter, importer (en json) et éventuellement éditer des templates
 - Commande action avec la valeur d'une commande Jeedom en tant que valeur
 - Passer le niveau de log à la volée en cas de changement
