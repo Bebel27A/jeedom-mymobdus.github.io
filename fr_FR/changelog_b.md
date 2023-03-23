@@ -2,6 +2,7 @@
 
 ## TODO
 - Vérifier si les équipements ont effectivement des configurations différentes
+- Heartbeat entre le démon et Jeedom . un signal envoyé par le démon à Jeedom, si pas de réponse le démon se termine (pour éviter les zombis)
 - Permettre un temps d'attente avant la première requête (compatibilité avec Huawei SUN2000)
 - Templates : exporter, importer (en json) et éventuellement éditer des templates
 - Commande action avec la valeur d'une commande Jeedom en tant que valeur
