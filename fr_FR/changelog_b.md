@@ -5,7 +5,6 @@
 - Commande action avec la valeur d'une commande Jeedom en tant que valeur
 - Passer le niveau de log à la volée en cas de changement
 - Passer les modifications de configuration à la volée lors de la sauvegarde sans redémarrer le démon
-- Liste déroulante pour le choix de la plage de registres
 - Permettre 3 types de lectures :
   - Polling toutes les x secondes (comme actuellement)
   - Cyclique sans pause entre les cycles : tester si ça fonctionne et ne génère pas une charge CPU trop importante
@@ -13,6 +12,9 @@
 - Documentation :
   - Ajouter la méthode pour la mise à l'heure des automates Crouzet et Zelio
   - Documenter les nouvelles fonctionnalités
+
+## 23/03/2023 V2.0 beta6
+- Liste déroulante pour le choix de la plage de registres (documentation ok)
 
 ## 21/03/2023 V2.0 beta5
 - Lecture d'une plage d'adresses en une fois et assignation indirecte des commandes info :
