@@ -13,6 +13,9 @@
   - Ajouter la méthode pour la mise à l'heure des automates Crouzet et Zelio
   - Documenter les nouvelles fonctionnalités
 
+## 23/03/2023 V2.0 beta7
+- Correction d'une erreur lors de la vérification des plages
+
 ## 23/03/2023 V2.0 beta6
 - Liste déroulante pour le choix de la plage de registres (documentation ok)
 
