@@ -77,6 +77,10 @@ Pour chaque équipement, il faut préciser le type de connexion ainsi que les pa
 
 Pour chaque commande, il faut préciser les type et sous-type Jeedom ainsi que les paramètres de la requête Modbus.
 
+Le fait de sauvegarder la configuration lance une validation. Si la configuration est valide, le démon est (re)démarré.  
+Si au moins 2 équipements sont configurés pour communiquer avec le même appareil, MyModbus génèrera une erreur et le
+démon ne sera pas lancé.
+
 La configuration se fait via Plugins / Protocole domotique / MyModbus :  
 ![Accès à la configuration](../images/Menu_configuration.png)
 
@@ -124,6 +128,10 @@ secondes ne génère que du bruit sur une courbe journalière ou hebdomadaire.
 
 > A titre d'exemple un automate Wago avec un polling supérieur à 30 secondes ne supporte pas de garder la connexion
 > ouverte et génère des erreurs lors de l'exécution des requêtes. 
+
+Le "Temps entre la connexion et la première requête" peut être mis à 0 si le paramètre peut être ignoré. Pour
+certains appareils, il faut configurer une pause entre la connexion et la première requête. Pour l'onduleur SUN2000
+de Huawei, par exemple, ce temps est à configurer à 1 seconde.
 
 ### Cas d'une connexion série
 

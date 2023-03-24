@@ -1,9 +1,6 @@
 # Changelog MyModbus beta
 
 ## TODO
-- Vérifier si les équipements ont effectivement des configurations différentes
-- Heartbeat entre le démon et Jeedom . un signal envoyé par le démon à Jeedom, si pas de réponse le démon se termine (pour éviter les zombis)
-- Permettre un temps d'attente avant la première requête (compatibilité avec Huawei SUN2000)
 - Templates : exporter, importer (en json) et éventuellement éditer des templates
 - Commande action avec la valeur d'une commande Jeedom en tant que valeur
 - Passer le niveau de log à la volée en cas de changement
@@ -15,6 +12,13 @@
 - Documentation :
   - Ajouter la méthode pour la mise à l'heure des automates Crouzet et Zelio
   - Documenter les nouvelles fonctionnalités
+
+## 24/03/2023 V2.0 beta8
+- Optimisation du temps de traitement des valeurs remontées par le démon
+- Gestion de la reconnexion en cas de déconnexion
+- Heartbeat entre le démon et Jeedom : un signal envoyé par le démon à Jeedom, si pas de réponse le démon se termine (pour éviter les zombis)
+- Permettre un temps d'attente avant la première requête (compatibilité avec Huawei SUN2000)
+- Validation de la configuration de sorte que deux équipements ne puissent pas utiliser la même connexion
 
 ## 23/03/2023 V2.0 beta7
 - Correction d'une erreur lors de la vérification des plages
