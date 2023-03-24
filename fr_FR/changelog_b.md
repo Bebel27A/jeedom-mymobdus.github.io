@@ -14,6 +14,7 @@
   - Documenter les nouvelles fonctionnalités
 
 ## 24/03/2023 V2.0 beta8
+- Correction de la fonction de validation des adresses d'une plage de registres
 - Optimisation du temps de traitement des valeurs remontées par le démon
 - Gestion de la reconnexion en cas de déconnexion
 - Heartbeat entre le démon et Jeedom : un signal envoyé par le démon à Jeedom, si pas de réponse le démon se termine (pour éviter les zombis)
