@@ -2,7 +2,6 @@
 
 ## TODO
 - Templates : exporter, importer (en json) et éventuellement éditer des templates
-- Commande action avec la valeur d'une commande Jeedom en tant que valeur
 - Permettre 3 types de lectures :
   - Polling toutes les x secondes (comme actuellement)
   - Cyclique sans pause entre les cycles : tester si ça fonctionne et ne génère pas une charge CPU trop importante
@@ -11,11 +10,14 @@
   - Ajouter la méthode pour la mise à l'heure des automates Crouzet et Zelio
   - Documenter les nouvelles fonctionnalités
 
-## 26/03/2023 V2.0 beta9 (en cours, ne pas faire de mise à jour, rester en version "2023-03-25 09:01:30")
+## 26/03/2023 V2.0 beta9
 - Passer le niveau de log à la volée en cas de changement sans redémarrer le démon
 - Passer les modifications de configuration à la volée lors de la sauvegarde sans redémarrer le démon
 - Meilleure gestion de la communication entre le démon et les process PyModbusClient
 - Meilleure gestion des arrêts des process
+- La valeur des commandes action peut être configurée comme dans le plugin Virtuel
+- Seuls les équipement utilisant le protocole de connexion "serial" ne peuvent utiliser la même interface.
+Les équipements en TCP ou UDP **peuvent** communiquer avec la même adresse IP, ça ne veut pas dire qu'ils le doivent.
 
 ## 24/03/2023 V2.0 beta8
 - Correction de la fonction de validation des adresses d'une plage de registres

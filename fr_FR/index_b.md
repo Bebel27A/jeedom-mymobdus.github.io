@@ -77,9 +77,10 @@ Pour chaque équipement, il faut préciser le type de connexion ainsi que les pa
 
 Pour chaque commande, il faut préciser les type et sous-type Jeedom ainsi que les paramètres de la requête Modbus.
 
-Le fait de sauvegarder la configuration lance une validation. Si la configuration est valide, le démon est (re)démarré.  
-Si au moins 2 équipements sont configurés pour communiquer avec le même appareil, MyModbus génèrera une erreur et le
-démon ne sera pas lancé.
+Le fait de sauvegarder la configuration lance une validation. Si la configuration est valide, la configuration du
+démon est actualisée.  
+Si au moins 2 équipements série sont configurés pour communiquer avec la même interface série, MyModbus génèrera une
+erreur et la configuration ne sera pas sauvegardée.
 
 La configuration se fait via Plugins / Protocole domotique / MyModbus :  
 ![Accès à la configuration](../images/Menu_configuration.png)
