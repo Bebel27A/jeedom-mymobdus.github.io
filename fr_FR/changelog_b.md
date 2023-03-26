@@ -3,8 +3,6 @@
 ## TODO
 - Templates : exporter, importer (en json) et éventuellement éditer des templates
 - Commande action avec la valeur d'une commande Jeedom en tant que valeur
-- Passer le niveau de log à la volée en cas de changement
-- Passer les modifications de configuration à la volée lors de la sauvegarde sans redémarrer le démon
 - Permettre 3 types de lectures :
   - Polling toutes les x secondes (comme actuellement)
   - Cyclique sans pause entre les cycles : tester si ça fonctionne et ne génère pas une charge CPU trop importante
@@ -12,6 +10,12 @@
 - Documentation :
   - Ajouter la méthode pour la mise à l'heure des automates Crouzet et Zelio
   - Documenter les nouvelles fonctionnalités
+
+## 26/03/2023 V2.0 beta9 (en cours, ne pas faire de mise à jour, rester en version "2023-03-25 09:01:30")
+- Passer le niveau de log à la volée en cas de changement sans redémarrer le démon
+- Passer les modifications de configuration à la volée lors de la sauvegarde sans redémarrer le démon
+- Meilleure gestion de la communication entre le démon et les process PyModbusClient
+- Meilleure gestion des arrêts des process
 
 ## 24/03/2023 V2.0 beta8
 - Correction de la fonction de validation des adresses d'une plage de registres
