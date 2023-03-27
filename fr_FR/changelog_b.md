@@ -10,13 +10,17 @@
   - Ajouter la méthode pour la mise à l'heure des automates Crouzet et Zelio
   - Documenter les nouvelles fonctionnalités
 
-## 27/03/2023 V2.0 beta9
+## 27/03/2023 (plus tard) V2.0 beta10
+- Correction de l'erreur lors de l'écriture d'un binaire (merci à ngm47)
+- La pause suite à une commande action est cumulable avec l'écriture de la valeur d'une expression
+
+## 27/03/2023 (8:57) V2.0 beta9
 - Passer le niveau de log à la volée en cas de changement sans redémarrer le démon
 - Passer les modifications de configuration à la volée lors de la sauvegarde sans redémarrer le démon
 - Meilleure gestion de la communication entre le démon et les process PyModbusClient
 - Meilleure gestion des arrêts des process
 - La valeur des commandes action peut être configurée comme dans le plugin Virtuel
-- Seuls les équipement utilisant le protocole de connexion "serial" ne peuvent utiliser la même interface.
+- Seuls les équipement utilisant le protocole de connexion "serial" ne peuvent utiliser la même interface.  
 Les équipements en TCP ou UDP **peuvent** communiquer avec la même adresse IP, ça ne veut pas dire qu'ils le doivent.
 
 ## 24/03/2023 V2.0 beta8
