@@ -10,7 +10,7 @@
   - Ajouter la méthode pour la mise à l'heure des automates Crouzet et Zelio
   - Documenter les nouvelles fonctionnalités
 
-## 26/03/2023 V2.0 beta9
+## 27/03/2023 V2.0 beta9
 - Passer le niveau de log à la volée en cas de changement sans redémarrer le démon
 - Passer les modifications de configuration à la volée lors de la sauvegarde sans redémarrer le démon
 - Meilleure gestion de la communication entre le démon et les process PyModbusClient
