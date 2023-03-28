@@ -12,7 +12,7 @@
   - Documenter les nouvelles fonctionnalités
 
 ## 29/03/2023 V2.0 beta11
-- Correction de l'affichage du paramètre "adresse esclave" des commandes action (merci à Noyax37)
+- Correction de l'affichage du paramètre "adresse esclave" des commandes action (merci à Noyax37 et à pilou226)
 
 ## 28/03/2023 (0:08) V2.0 beta10
 - Correction de l'erreur lors de l'écriture d'un binaire (merci à ngm47)
