@@ -223,6 +223,9 @@ Pour **les commandes action**, les couleurs et les listes ne sont pas gérées p
 Si la commande correspond à un registre dans un esclave sur un bus série d'une connexion série directe ou derrière
 une passerelle IP/série, vous devez renseigner l'adresse de l'esclave sur le bus Modbus. Sinon vous pouvez laisser "0".
 
+> :memo: ***Remarque***  
+> Sur l'ancienne version bêta, ce paramètre s'appelait "Unit ID" et était à configurer dans l'équipement.
+
 ### Fonction Modbus
 
 Choisissez la fonction Modbus à utiliser pour la lecture ou l'écriture du registre. Normalement, la fonction à utiliser
