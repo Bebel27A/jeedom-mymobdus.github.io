@@ -10,7 +10,7 @@
   - Ajouter la méthode pour la mise à l'heure des automates Crouzet et Zelio
   - Documenter les nouvelles fonctionnalités
 
-## 27/03/2023 (plus tard) V2.0 beta10
+## 28/03/2023 (0:08) V2.0 beta10
 - Correction de l'erreur lors de l'écriture d'un binaire (merci à ngm47)
 - La pause suite à une commande action est cumulable avec l'écriture de la valeur d'une expression
 
