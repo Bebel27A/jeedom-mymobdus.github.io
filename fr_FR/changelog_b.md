@@ -2,14 +2,19 @@
 
 ## TODO
 - Améliorer la saisie des commandes an désélectionnant les options invisibles (merci à Noyax37)
+- Vérifier si jeemymodbus.php plante à partir du moment où une valeur interprétée comme "nan" est réceptionnée (merci ced2001)
 - Templates : exporter, importer (en json) et éventuellement éditer des templates
-- Permettre 3 types de lectures :
-  - Polling toutes les x secondes (comme actuellement)
-  - Cyclique sans pause entre les cycles : tester si ça fonctionne et ne génère pas une charge CPU trop importante
-  - Sur déclenchement
 - Documentation :
   - Ajouter la méthode pour la mise à l'heure des automates Crouzet et Zelio
   - Documenter les nouvelles fonctionnalités
+
+## xx/04/2023 (en cours) V2.0 beta12
+- Ajout du mode cyclique
+- Ajout du mode lecture sur événement
+- Mise en place des paramètres d'équipement par défaut
+- Migration de la configuration de l'équipement en cas de migration depuis l'ancienne version de MyModbus
+- Remontée de la valeur lue vers Jeedom par le démon uniquement en cas de changement de valeur
+- Diverses optimisations
 
 ## 29/03/2023 V2.0 beta11
 - Correction de l'affichage du paramètre "adresse esclave" des commandes action (merci à Noyax37 et à pilou226)
