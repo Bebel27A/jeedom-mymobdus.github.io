@@ -8,9 +8,10 @@
   - Ajouter la méthode pour la mise à l'heure des automates Crouzet et Zelio
   - Documenter les nouvelles fonctionnalités
 
-## xx/04/2023 (en cours) V2.0 beta12
+## 04/04/2023 V2.0 beta12
 - Ajout du mode cyclique
 - Ajout du mode lecture sur événement
+- Le temps de polling minimum est maintenant de 1 seconde
 - Mise en place des paramètres d'équipement par défaut
 - Migration de la configuration de l'équipement en cas de migration depuis l'ancienne version de MyModbus
 - Remontée de la valeur lue vers Jeedom par le démon uniquement en cas de changement de valeur
