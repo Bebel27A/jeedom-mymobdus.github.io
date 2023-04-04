@@ -2,11 +2,15 @@
 
 ## TODO
 - Améliorer la saisie des commandes an désélectionnant les options invisibles (merci à Noyax37)
-- Vérifier si jeemymodbus.php plante à partir du moment où une valeur interprétée comme "nan" est réceptionnée (merci ced2001)
 - Templates : exporter, importer (en json) et éventuellement éditer des templates
 - Documentation :
   - Ajouter la méthode pour la mise à l'heure des automates Crouzet et Zelio
-  - Documenter les nouvelles fonctionnalités
+  - Documenter les nouvelles fonctionnalités (à partir de beta12)
+
+## 05/04/2023 V2.0 beta13
+- Contournement de l'erreur d'affichage des paramètres d'équipement (Solution en cours)
+- Correction de l'erreur lors de la duplication d'un équipement (merci à Noyax37)
+- Démon : si la lecture retourne 'nan', la valeur n'est pas remontée vers Jeedom et une erreur est générée (merci à ced2001)
 
 ## 04/04/2023 V2.0 beta12
 - Ajout du mode cyclique
