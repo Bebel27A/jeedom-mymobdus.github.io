@@ -7,6 +7,12 @@
   - Ajouter la méthode pour la mise à l'heure des automates Crouzet et Zelio
   - Documenter les nouvelles fonctionnalités (à partir de beta12)
 
+## xx/04/2023 V2.0 beta14 (en cours)
+- Les reconnexions automatiques de pymodbus sont désactivées. Les (re)connexions sont gérées par le démon (merci à thomaspascal)
+- En cas de sauvegarde de la configuration, le démon se déconnecte avant de prendre la nouvelle configuration en compte (merci à thomaspascal)
+- Maintien de l'ordre des commandes lors de la sauvegarde qui rajoute les commandes spéciales (merci à thomaspascal)
+- Suppression des paramètres de configuration utilisés dans l'ancienne version (et donc le retour en version stable est rendu impossible sans restaurer un backup)
+
 ## 05/04/2023 V2.0 beta13
 - Contournement de l'erreur d'affichage des paramètres d'équipement (Solution en cours)
 - Correction de l'erreur lors de la duplication d'un équipement (merci à Noyax37)
