@@ -7,6 +7,11 @@
   - Ajouter la méthode pour la mise à l'heure des automates Crouzet et Zelio
   - Documenter les nouvelles fonctionnalités (à partir de beta12)
 
+## xx/04/2023 V2.0 beta15 (en cours)
+- Remontée de la valeur lue vers Jeedom par le démon si la commande est configurée "Répéter les valeurs identiques" (merci Bison pour l'astuce)
+- Meilleure gestion des exceptions
+- Ajout du nom de l'équipement dans les logs du démon (là où c'est possible)
+
 ## 07/04/2023 V2.0 beta14
 - Les reconnexions automatiques de pymodbus sont désactivées. Les (re)connexions sont gérées par le démon (merci à thomaspascal)
 - En cas de sauvegarde de la configuration, le démon se déconnecte avant de prendre la nouvelle configuration en compte (merci à thomaspascal)
