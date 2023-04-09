@@ -1,14 +1,14 @@
 # Changelog MyModbus beta
 
 ## TODO
-- Améliorer la saisie des commandes an désélectionnant les options invisibles (merci à Noyax37)
 - Templates : exporter, importer (en json) et éventuellement éditer des templates
 - Documentation :
   - Ajouter la méthode pour la mise à l'heure des automates Crouzet et Zelio
-  - Documenter les nouvelles fonctionnalités (à partir de beta12)
+  - Documenter les nouvelles fonctionnalités (à partir de la beta12)
 
-## xx/04/2023 V2.0 beta15 (en cours)
-- Remontée de la valeur lue vers Jeedom par le démon si la commande est configurée "Répéter les valeurs identiques" (merci Bison pour l'astuce)
+## 09/04/2023 V2.0 beta15
+- Amélioration de la saisie des commandes an désélectionnant les options invisibles (merci à Noyax37)
+- Remontée de la valeur lue vers Jeedom par le démon si la commande est configurée avec "Répéter les valeurs identiques" à "Oui" (merci Bison pour l'astuce)
 - Meilleure gestion des exceptions
 - Ajout du nom de l'équipement dans les logs du démon (là où c'est possible)
 
