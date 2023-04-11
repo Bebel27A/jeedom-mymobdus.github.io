@@ -1,6 +1,7 @@
 # Changelog MyModbus beta
 
 ## TODO
+- BUGFIX: Affichage d'un équipement avec la mauvaise configuration (OK en cas de rafraichissement)
 - Templates : exporter, importer (en json) et éventuellement éditer des templates
 - Documentation :
   - Ajouter la méthode pour la mise à l'heure des automates Crouzet et Zelio
