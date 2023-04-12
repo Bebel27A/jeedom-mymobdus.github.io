@@ -1,12 +1,14 @@
 # Changelog MyModbus beta
 
 ## TODO
-- BUGFIX: Affichage d'un équipement avec la mauvaise configuration (OK en cas de rafraichissement)
-- Pour les commandes binaires qui lisent depuis une plage de registres, les plages numériques doivent être listées mais un filtre doit être spécifié
+- BUGFIX (?) : Affichage d'un équipement avec la mauvaise configuration (OK en cas de rafraichissement) (merci à ngm47)
 - Templates : exporter, importer (en json) et éventuellement éditer des templates
 - Documentation :
   - Ajouter la méthode pour la mise à l'heure des automates Crouzet et Zelio
   - Documenter les nouvelles fonctionnalités (à partir de la beta12)
+
+## 13/04/2023 V2.0 beta17
+- Pour les commandes binaires depuis une plage de registres, les plages numériques en source sont possibles mais un filtre doit être spécifié (merci à Noyax37)
 
 ## 10/04/2023 V2.0 beta16
 - Petite correction sur le log lors de l’exécution d’une commande action
