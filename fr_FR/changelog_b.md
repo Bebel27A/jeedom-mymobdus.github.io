@@ -2,10 +2,14 @@
 
 ## TODO
 - BUGFIX: Affichage d'un équipement avec la mauvaise configuration (OK en cas de rafraichissement)
+- Pour les commandes binaires qui lisent depuis une plage de registres, les plages numériques doivent être listées mais un filtre doit être spécifié
 - Templates : exporter, importer (en json) et éventuellement éditer des templates
 - Documentation :
   - Ajouter la méthode pour la mise à l'heure des automates Crouzet et Zelio
   - Documenter les nouvelles fonctionnalités (à partir de la beta12)
+
+## 10/04/2023 V2.0 beta16
+- Petite correction sur le log lors de l’exécution d’une commande action
 
 ## 09/04/2023 V2.0 beta15
 - Amélioration de la saisie des commandes an désélectionnant les options invisibles (merci à Noyax37)
