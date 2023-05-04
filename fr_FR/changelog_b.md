@@ -1,11 +1,16 @@
 # Changelog MyModbus beta
 
 ## TODO
-- BUGFIX (?) : Affichage d'un équipement avec la mauvaise configuration (OK en cas de rafraichissement) (merci à ngm47)
 - Templates : exporter, importer (en json) et éventuellement éditer des templates
 - Documentation :
   - Ajouter la méthode pour la mise à l'heure des automates Crouzet et Zelio
   - Documenter les nouvelles fonctionnalités (à partir de la beta12)
+
+## 05/05/2023 V2.0 beta18
+- Prise en charge des commandes action avec une liste
+- Première tentative du mode bi-maître spécifique aux chaudières De Dietrich Diematic
+- Affichage de la configuration de l'endianess pour les commandes actions (merci à thomaspascal)
+- Indentation du code de tout le plugin avec 2 espaces au lieu de 4
 
 ## 13/04/2023 V2.0 beta17
 - Pour les commandes binaires depuis une plage de registres, les plages numériques en source sont possibles mais un filtre doit être spécifié (merci à Noyax37)
