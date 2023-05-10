@@ -6,6 +6,11 @@
   - Ajouter la méthode pour la mise à l'heure des automates Crouzet et Zelio
   - Documenter les nouvelles fonctionnalités (à partir de la beta12)
 
+## 10/05/2023 V2.0 beta20
+- Correction des log des écritures en mode bi-maître
+- Ajout de la commande info liée aux commandes action
+- Ajout du bouton de création de commande en fin de tableau
+
 ## 06/05/2023 V2.0 beta19
 - Deuxième tentative du mode bi-maître spécifique aux chaudières De Dietrich Diematic (merci à loustic03 de m'avoir laissé autant de temps pour tester chez lui)
 
