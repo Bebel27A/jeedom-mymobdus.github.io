@@ -7,7 +7,7 @@
   - Documenter les nouvelles fonctionnalités (à partir de la beta12)
 
 ## 10/05/2023 V2.0 beta20
-- Correction des log des écritures en mode bi-maître
+- Correction des logs des écritures en mode bi-maître
 - Ajout de la commande info liée aux commandes action
 - Ajout du bouton de création de commande en fin de tableau
 
