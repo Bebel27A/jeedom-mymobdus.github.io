@@ -6,6 +6,9 @@
   - Ajouter la méthode pour la mise à l'heure des automates Crouzet et Zelio
   - Documenter les nouvelles fonctionnalités (à partir de la beta12)
 
+## 06/06/2023 V2.0 beta21
+- Forçage de la version pymodbus 3.2.2 pour éviter des erreurs avant de trouver une meilleure solution
+
 ## 10/05/2023 V2.0 beta20
 - Correction des logs des écritures en mode bi-maître
 - Ajout de la commande info liée aux commandes action
@@ -66,7 +69,7 @@
 - Meilleure gestion de la communication entre le démon et les process PyModbusClient
 - Meilleure gestion des arrêts des process
 - La valeur des commandes action peut être configurée comme dans le plugin Virtuel
-- Seuls les équipement utilisant le protocole de connexion "serial" ne peuvent utiliser la même interface.  
+- Seuls les équipements utilisant le protocole de connexion "serial" ne peuvent pas utiliser la même interface.  
 Les équipements en TCP ou UDP **peuvent** communiquer avec la même adresse IP, ça ne veut pas dire qu'ils le doivent.
 
 ## 24/03/2023 V2.0 beta8
