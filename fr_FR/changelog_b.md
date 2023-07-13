@@ -6,6 +6,10 @@
   - Ajouter la méthode pour la mise à l'heure des automates Crouzet et Zelio
   - Documenter les nouvelles fonctionnalités (à partir de la beta12)
 
+## 14/07/2023 V2.0 beta22
+- Le bouton d'ajout de commande en bas du tableau des commandes fonctionne dorénavant comme attendu
+- Les retours NaN sont correctement gérés
+
 ## 06/06/2023 V2.0 beta21
 - Forçage de la version pymodbus 3.2.2 pour éviter des erreurs avant de trouver une meilleure solution
 
