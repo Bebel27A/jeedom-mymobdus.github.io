@@ -6,6 +6,10 @@
   - Ajouter la méthode pour la mise à l'heure des automates Crouzet et Zelio
   - Documenter les nouvelles fonctionnalités (à partir de la beta12)
 
+## 02/08/2023 V2.0 beta23
+- Les listes sont gérées pour les binaires également
+- Les couleurs sont prises en comptes
+
 ## 14/07/2023 V2.0 beta22
 - Le bouton d'ajout de commande en bas du tableau des commandes fonctionne dorénavant comme attendu
 - Les retours NaN sont correctement gérés
