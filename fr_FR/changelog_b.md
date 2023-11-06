@@ -6,6 +6,11 @@
   - Ajouter la méthode pour la mise à l'heure des automates Crouzet et Zelio
   - Documenter les nouvelles fonctionnalités (à partir de la beta12)
 
+## 06/11/2023 V2.0 beta24
+- Correction erreur 500 à la sauvegarde d'un nouvel équipement (merci ksin)
+- Le démon est "launchable" si plusieurs équipements utilisent le même port série. Dans ce cas, c'est à l'utilisateur de configurer le plugin correctement (merci indirectement à ksin)
+- Petites corrections
+
 ## 02/08/2023 V2.0 beta23
 - Les listes sont gérées pour les binaires également
 - Les couleurs sont prises en comptes
