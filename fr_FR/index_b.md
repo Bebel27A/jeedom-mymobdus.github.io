@@ -29,7 +29,7 @@ Le protocole Modbus est basé sur une norme qui ne sera pas détaillée ici. Vou
 ## Organisation de la mémoire
 
 Dans tout appareil équipé de mémoire, celle-ci est organisées par adresses. Les adresses de registres accessibles
-via Modbus sont organisées de sorte de se succéder dans différentes partie de la zone mémoire.  
+via Modbus sont organisées de sorte de se succéder dans différentes parties de la zone mémoire.  
 Il faut s'imaginer les registres, les uns à la suite des autres, comme des "cases mémoire" bien rangées.
 
 Par exemple, pour la zone mémoire de la mémoire interne des automates Wago, les premières adresses sont organisées
@@ -118,7 +118,7 @@ esclaves se trouvent sur le bus série. L'adresse de l'esclave est à renseigner
 L'option "Garder la connexion ouverte" est commune à tous les protocoles de connexion et permet de ne pas activement
 fermer la connexion entre les cycles de requêtes. Ce paramètre est propre à votre installation et à votre configuration.
 Il se peut qu'il faille activer ou désactiver cette option en fonction de votre installation et du polling (temps de
-raffraisissement).
+raffraichissement).
 
 Le polling est un temps en secondes qui correspond au temps entre le début des cycles de lecture des commandes info.
 Les écritures déclenchées par les commandes action sont effectuées durant ce même cycle, après les lectures.  
