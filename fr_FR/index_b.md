@@ -396,7 +396,7 @@ commandes info suivantes.
 Plus simplement : on lit tout une plage et on vient piocher dans cette plage les valeurs dont on a réellement besoin.
 
 Ici un exemple :  
-![Exemple d'utilisation de plage de registres](../images/Exemple_plage.png)
+![Exemple d'utilisation de plage de registres](../images/exemple_plage.png)
 
 Dans cet exemple, la commande avec l'ID 291 lit une plage à partir de l'adresse 12308 et de 8 registres, donc jusqu'à
 l'adresse 12315.  
