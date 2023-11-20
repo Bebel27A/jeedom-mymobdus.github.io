@@ -209,7 +209,7 @@ Ici la configuration est également simple.
 > calcul qui permet de lire les valeurs négatives par le type de variable 'int16' sans calcul.  
 > De manière générale, il vaut mieux revoir la configuration complète en détail.
 
-Après la création d'un équipement, la liste des commandes est vide (à part les 2 commandes liées au raffraîchissement).
+Après la création d'un équipement, la liste des commandes est vide (à part les 2 commandes liées au rafraîchissement).
 Tant que cette liste sera vide, le démon ne pourra pas être lancé et MyModbus génèrera une erreur si l'équipement est
 sauvegardé quand il est activé et que la liste des commandes est vide.
 
@@ -406,6 +406,8 @@ C'est une sorte de cache de lecture.
 
 L'utilisation de plages de registres dans un équipement MyModbus dépend de la compatiblité du matériel et du nombre de
 registres lisibles en une requête. Certains appareils sont en effet limités.
+
+La valeur d'une plage de registres est 1 si la lecture n'a pas généré d'erreur, sinon 0.
 
 ## Sauvegarde d'un équipement
 
