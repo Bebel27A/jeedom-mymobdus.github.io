@@ -1,7 +1,7 @@
 # Présentation
 
-Le plugin MyModBus permet d'intégrer des communications Modbus dans Jeedom. MyModbus est un client Modbus capable
-de communiquer en :
+Le plugin MyModBus permet d'intégrer des communications Modbus dans Jeedom. MyModbus est un maître Modbus capable de
+communiquer en :
 - Ethernet TCP standard ou RTU
 - Ethernet UDP
 - Série en mode binaire, ASCII ou RTU
@@ -10,7 +10,7 @@ Il est compatible avec plusieurs types d’appareil (automate, chaudière, VMC, 
 
 ## Modbus ?
 
-Un serveur Modbus est un appareil qui met à disposition des registres en lecture et/ou en écriture. Il existe des
+Un esclave Modbus est un appareil qui met à disposition des registres en lecture et/ou en écriture. Il existe des
 registres binaires de un bit et des registres numériques de 16 bits.
 
 Initialement prévu pour la communication avec les automates Modicon(R), le prorocol Modbus permet d'effectuer un
@@ -28,8 +28,8 @@ Le protocole Modbus est basé sur une norme qui ne sera pas détaillée ici. Vou
 
 ## Organisation de la mémoire
 
-Dans tout appareil équipé de mémoire, celle-ci est organisées par adresses. Les adresses de registres accessibles
-via Modbus sont organisées de sorte de se succéder dans différentes parties de la zone mémoire.  
+Dans tout appareil équipé de mémoire, celle-ci est organisée par adresses. Les adresses de registres accessibles via
+Modbus sont organisées de sorte de se succéder dans différentes parties de la zone mémoire.  
 Il faut s'imaginer les registres, les uns à la suite des autres, comme des "cases mémoire" bien rangées.
 
 Par exemple, pour la zone mémoire de la mémoire interne des automates Wago, les premières adresses sont organisées
@@ -46,10 +46,10 @@ C'est une gymnastique qu'il faut essayer d'apprendre, mais tous les appareils ne
 # Installation de MyModbus
 
 L'installation se fait via le market, comme tous les plugins Jeedom. Une fois téléchargé, MyModbus installe ses
-dépendances, cette étape peut durer plusieurs dizaines de minutes en fonction de la bande passante disponible et
-des capacités de votre machine.  
-Il est fortement conseillé de désactiver la gestion automatique du démon durant l'installation afin que le démon
-ne soit pas démarré par Jeedom sans que MyModbus ne soit installé complètement.
+dépendances, cette étape peut durer plusieurs dizaines de minutes en fonction de la bande passante disponible et des
+capacités de votre machine.  
+Il est fortement conseillé de désactiver la gestion automatique du démon durant l'installation afin que le démon ne
+soit pas démarré par Jeedom sans que MyModbus ne soit installé complètement.
 
 Ici, on peut constater que l'installation de MyModbus sur un Raspberry PI 3B peut durer vraiment longtemps :  
 ![Installation sur un Rasperry PI 3B](../images/Installation_RPI3B.png)
@@ -61,7 +61,7 @@ Vous pouvez activer la gestion automatique du démon par Jeedom si vous le souha
 
 MyModbus lance un démon écrit en Python qui utilise le module [pymodbus](https://pypi.org/project/pymodbus/).  
 Dans la documentation de pymodbus, on peut voir que la version minimale requise pour pouvoir l'utiliser est
-Python >= 3.8, ne vous inquiétez pas, ce point est géré quel que soit la version installée sur votre machine Jeedom.
+Python >= 3.8, ne vous inquiétez pas, ce point est géré quelle que soit la version installée sur votre machine Jeedom.
 
 ***
 
@@ -75,12 +75,15 @@ sont respectés.
 
 Pour chaque équipement, il faut préciser le type de connexion ainsi que les paramètres de cette connexion.
 
+> :memo: ***Remarque***  
+> Si vous avez plusieurs appareils en Modbus série et que vous communiquez avec ces appareils via la même interface, il
+> faut alors ne déclarer qu'un seul équipement MyModbus et spécifier l'adresse esclave de l'appareil dans les
+> commandes.
+
 Pour chaque commande, il faut préciser les type et sous-type Jeedom ainsi que les paramètres de la requête Modbus.
 
 Le fait de sauvegarder la configuration lance une validation. Si la configuration est valide, la configuration du
-démon est actualisée.  
-Si au moins 2 équipements série sont configurés pour communiquer avec la même interface série, MyModbus génèrera une
-erreur et la configuration ne sera pas sauvegardée.
+démon est actualisée.
 
 La configuration se fait via Plugins / Protocole domotique / MyModbus :  
 ![Accès à la configuration](../images/Menu_configuration.png)
@@ -104,7 +107,7 @@ configuration.
 - **Configuration** : c'est là que vous configurez la connexion avec votre équipement.
 - **Informations** : vous pouvez ajouter vos propres notes afin de documenter votre équipement.
 
-MyModbus gère trois protocoles de connexion .
+MyModbus gère trois protocoles de connexion :
 - Série : à choisir pour un équipement communiquant via une liaison série (RS232, RS485, RS422, ...) **directement**
 avec votre machine Jeedom. Un seul équipement est défini dans MyModbus pour chaque interface série, même si plusieurs
 esclaves se trouvent sur le bus série. L'adresse de l'esclave est à renseigner dans les commandes.
@@ -113,26 +116,37 @@ esclaves se trouvent sur le bus série. L'adresse de l'esclave est à renseigner
 
 > :warning: ***Important***  
 > Si vous avez des appareils Modbus reliés à une paserelle IP/série et que votre machine Jeedom communique avec la
-> passerelle, il faudra choisir une liaison TCP (ou UDP) et configurer la liaison vers la passerelle.
+> passerelle, il faudra choisir une liaison TCP (ou UDP) et configurer la liaison vers la passerelle. Dans ce cas
+> l'adresse de l'esclave doit être renseignée dans les commandes.
 
 L'option "Garder la connexion ouverte" est commune à tous les protocoles de connexion et permet de ne pas activement
 fermer la connexion entre les cycles de requêtes. Ce paramètre est propre à votre installation et à votre configuration.
-Il se peut qu'il faille activer ou désactiver cette option en fonction de votre installation et du polling (temps de
-raffraichissement).
+Il se peut qu'il faille activer ou désactiver cette option en fonction de votre installation et du reste de la
+configuration.
 
-Le polling est un temps en secondes qui correspond au temps entre le début des cycles de lecture des commandes info.
-Les écritures déclenchées par les commandes action sont effectuées durant ce même cycle, après les lectures.  
+Il est possible de configurer le rafraichissement de 3 manières :
+- Polling : temps en secondes qui correspond au temps entre le début des cycles de lecture des commandes info,
+- Cyclique : pas de temps de pause entre les requêtes de lecture,
+- Sur événement : les lectures sont lancées lorsque la commande action "Rafraîchir" est exécutée.
+
 La valeur minimale de polling acceptée par MyModbus est 10 secondes. Une valeur conseillée serait de l'ordre de la
 minute, soit 60 secondes. Un polling bas, c'est-à-dire des lectures très fréquentes, induit une grande quantité de
 données à historiser. Prenez garde à ce point et gardez en tête que l'enregistrement des valeurs toutes les 10
 secondes ne génère que du bruit sur une courbe journalière ou hebdomadaire.
 
 > A titre d'exemple un automate Wago avec un polling supérieur à 30 secondes ne supporte pas de garder la connexion
-> ouverte et génère des erreurs lors de l'exécution des requêtes. 
+> ouverte et génère des erreurs lors de l'exécution des requêtes.
+
+Le "Timeout pour vérification d'une commande action" est le temps que le démon attend après chaque cycle de lecture
+pour se donner le temps de vérifier si des commandes action ont été déclanchées.
 
 Le "Temps entre la connexion et la première requête" peut être mis à 0 si le paramètre peut être ignoré. Pour
 certains appareils, il faut configurer une pause entre la connexion et la première requête. Pour l'onduleur SUN2000
 de Huawei, par exemple, ce temps est à configurer à 1 seconde.
+
+La commande "Temps de rafraîchissement" est actualisée lorsque l'équipement est configuré en polling ou en cyclique.  
+Les écritures déclenchées par les commandes action sont effectuées après les lectures.  
+Cette commande ne peut pas être supprimée, tout comme la commande action "Rafraîchir".
 
 ### Cas d'une connexion série
 
@@ -140,10 +154,13 @@ Une connexion série non configurée se présente comme ceci :
 ![Connexion série vierge](../images/Connexion_série_vierge.png)
 
 L'interface correspond au point de connexion de la liaison série sur votre machine Jeedom. Jeedom propose une liste
-d'interfaces standards en fonction du modèle de votre machine. En plus de ces interfaces. MyModbus propose les
+d'interfaces standards en fonction du modèle de votre machine. En plus de ces interfaces, MyModbus propose les
 interfaces série disponibles sur la machine. Les indications de
-[cette page](https://www.baeldung.com/linux/all-serial-devices) peuvent vous être utiles pour retrouver quelle interface
-utiliser.
+[cette page](https://www.baeldung.com/linux/all-serial-devices) peuvent vous être utiles pour retrouver quelle
+interface utiliser.
+
+Le "Mode bi-maître" n'est pas tout à fait au point. Il devrait permettre de commmuniquer avec certaines chaudières
+De Dietrich Diematic.
 
 > :memo: ***Remarque***  
 > Il se peut que les interfaces proposées par MyModbus soient redondantes avec celles proposées par Jeedom et que
@@ -164,7 +181,7 @@ Une connexion TCP non configurée se présente comme ceci :
 Ici la configuration est simple : il suffit de renseigner l'adresse IP de l'appareil et le port à utiliser. Sauf cas
 particulier, le port est le 502.
 
-L'option RTU sur TCP permet d'activer le mode "RTU over TCP".
+L'option "RTU sur TCP" permet d'activer le mode "RTU over TCP".
 
 ### Cas d'une connexion UDP
 
@@ -186,9 +203,9 @@ Ici la configuration est également simple.
 > calcul qui permet de lire les valeurs négatives par le type de variable 'int16' sans calcul.  
 > De manière générale, il vaut mieux revoir la configuration complète en détail.
 
-Après la création d'un équipement, la liste des commandes est vide. Tant que cette liste sera vide, le démon ne pourra
-pas être lancé et MyModbus génèrera une erreur si l'équipement est sauvegardé quand il est activé et que la liste des
-commandes est vide.
+Après la création d'un équipement, la liste des commandes est vide (à part les 2 commande liées au raffraîchissement).
+Tant que cette liste sera vide, le démon ne pourra pas être lancé et MyModbus génèrera une erreur si l'équipement est
+sauvegardé quand il est activé et que la liste des commandes est vide.
 
 Pour créer une nouvelle commande, il faut cliquer sur le bouton "Ajouter une commande". La nouvelle commande est ajoutée
 à la fin de la liste et peut être déplacée avec un cliquer-déplacer.
@@ -342,7 +359,7 @@ la commande)
 - une seconde commande action qui remet le bit à 0
 
 > :memo: ***Remarques***  
-> 1. Pour les actions, les sous-types "Couleur" et "Liste" sont ignorés de même que les variables sur 8 bits.
+> 1. Pour les actions, les variables sur 8 bits sont ignorées sans avertissement.
 > 2. Le démon génèrera un 'Warning' pour les commandes action des types de variable SunSpec dont les adresses ne sont
 > pas concécutives et ignorera la requête afin d'éviter de supprimer les registres qui se trouvent entre les deux
 > registres paramétrés.
@@ -354,6 +371,34 @@ Dans cette colonne, vous pouvez visualiser quelle est la valeur des commandes in
 ### Options
 
 Les options standards de Jeedom.
+
+## Optimisation du nombre de requêtes à l'aide des plages de registres
+
+Si les registres à lire sont assez regroupés, il est vivement conseillé d'utiliser les plages de registres afin de
+limiter le nombre de requêtes et donc le temps d'exécution d'un cycle de lecture et la charge CPU de la machine Jeedom
+pour la gestion des lectures.
+
+Le gain en temps d'exécution est énorme pour des connexions série.
+
+Imaginons que sur un équipement vous vouliez lire plusieurs adresses entre 40000 et 40120, que dans cette plage toutes
+les adresses sont lisibles (parfois il y a des trous dans les tables d'adresses avec des adresses qu'il est impossible
+de lire et dont la tentative de lecture génère une erreur). Il est possible de définir une plage de registres à lire
+une seule fois, dont la commande info doit être placée avant la première utilisation et d'y faire référence dans les
+commandes info suivantes.
+
+Plus simplement : on lit tout une plage et on vient piocher dans cette plage les valeurs dont on a réellement besoin.
+
+Ici un exemple :  
+![Exemple d'utilisation de plage de registres](../images/Exemple_plage.png)
+
+Dans cet exemple, la commande avec l'ID 291 lit une plage à partir de l'adresse 12308 et de 8 registres, donc jusqu'à
+l'adresse 12315.  
+La commande avec l'ID 293 utilise le registre 12315 en ne lançant pas de nouvelle requête de lecture mais en piochant
+dans la plage de l'ID 291.  
+C'est une sorte de cache de lecture.
+
+L'utilisation de plages de registres dans un équipement MyModbus dépend de la compatiblité du matériel et du nombre de
+registres lisibles en une requête. Certains appareils sont en effet limités.
 
 ## Sauvegarde d'un équipement
 

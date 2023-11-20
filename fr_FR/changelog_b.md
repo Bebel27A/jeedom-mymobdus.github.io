@@ -1,10 +1,17 @@
 # Changelog MyModbus beta
 
 ## TODO
+- Utiliser la dernière version de pymodbus
 - Templates : exporter, importer (en json) et éventuellement éditer des templates
 - Documentation :
   - Ajouter la méthode pour la mise à l'heure des automates Crouzet et Zelio
-  - Documenter les nouvelles fonctionnalités (à partir de la beta12)
+  - Documenter les nouvelles fonctionnalités (documentation à jour avec la version V2.0 beta25)
+
+## xx/11/2023 V2.0 beta25 (à venir)
+- Liste des paquets à installer réduite au minimum
+- Passage à python V3.11.6 sous pyenv
+- Retour arrière sur une modification de la version V2.0 beta24 : le fait que le démon soit "launchable" si plusieurs équipements utilisent le même port série
+- Mise à jour de la documentation
 
 ## 06/11/2023 V2.0 beta24
 - Correction erreur 500 à la sauvegarde d'un nouvel équipement (merci ksin)
