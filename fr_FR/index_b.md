@@ -93,6 +93,9 @@ La configuration se fait via Plugins / Protocole domotique / MyModbus :
 C'est la première étape. Sans équipement, le démon n'est pas démarré. Après l'installation, la configuration est vide :  
 ![Configuration vide](../images/Configuration_vide.png)
 
+> :memo: ***Remarque***  
+> Le bouton Templates n'est pas encore fonctionnel.
+
 En cliquant sur "Ajouter", vous êtes invité à donner le nom de votre équipement. Pour la documentation, ce nom sera
 "Equipement MyModbus". En validant, vous arrivez à la page de configuration de l'équipement. Juste après sa création,
 l'équipement n'est pas configuré :  
@@ -129,10 +132,12 @@ Il est possible de configurer le rafraichissement de 3 manières :
 - Cyclique : pas de temps de pause entre les requêtes de lecture,
 - Sur événement : les lectures sont lancées lorsque la commande action "Rafraîchir" est exécutée.
 
-La valeur minimale de polling acceptée par MyModbus est 10 secondes. Une valeur conseillée serait de l'ordre de la
+La valeur minimale de polling acceptée par MyModbus est de 1 seconde. Une valeur conseillée serait de l'ordre de la
 minute, soit 60 secondes. Un polling bas, c'est-à-dire des lectures très fréquentes, induit une grande quantité de
 données à historiser. Prenez garde à ce point et gardez en tête que l'enregistrement des valeurs toutes les 10
-secondes ne génère que du bruit sur une courbe journalière ou hebdomadaire.
+secondes ne génère que du bruit sur une courbe journalière ou hebdomadaire.  
+Si le temps de polling est configuré trop faible par rapport au temps nécessaire pour la lecture de tous les registres,
+Le temps de polling est réajusté par le démon sans modifier la configuration.
 
 > A titre d'exemple un automate Wago avec un polling supérieur à 30 secondes ne supporte pas de garder la connexion
 > ouverte et génère des erreurs lors de l'exécution des requêtes.
@@ -142,10 +147,11 @@ pour se donner le temps de vérifier si des commandes action ont été déclanch
 
 Le "Temps entre la connexion et la première requête" peut être mis à 0 si le paramètre peut être ignoré. Pour
 certains appareils, il faut configurer une pause entre la connexion et la première requête. Pour l'onduleur SUN2000
-de Huawei, par exemple, ce temps est à configurer à 1 seconde.
+de Huawei, par exemple, ce temps est à configurer à 1 seconde minimum.
+
+Les écritures déclenchées par les commandes action sont effectuées après les lectures.
 
 La commande "Temps de rafraîchissement" est actualisée lorsque l'équipement est configuré en polling ou en cyclique.  
-Les écritures déclenchées par les commandes action sont effectuées après les lectures.  
 Cette commande ne peut pas être supprimée, tout comme la commande action "Rafraîchir".
 
 ### Cas d'une connexion série
@@ -159,8 +165,8 @@ interfaces série disponibles sur la machine. Les indications de
 [cette page](https://www.baeldung.com/linux/all-serial-devices) peuvent vous être utiles pour retrouver quelle
 interface utiliser.
 
-Le "Mode bi-maître" n'est pas tout à fait au point. Il devrait permettre de commmuniquer avec certaines chaudières
-De Dietrich Diematic.
+Le "Mode bi-maître" n'est pas tout à fait au point. Il devrait néanmoins permettre de mieux commmuniquer avec certaines
+chaudières De Dietrich Diematic. Ce mode sera peut-être amélioré dans le futur.
 
 > :memo: ***Remarque***  
 > Il se peut que les interfaces proposées par MyModbus soient redondantes avec celles proposées par Jeedom et que
@@ -203,7 +209,7 @@ Ici la configuration est également simple.
 > calcul qui permet de lire les valeurs négatives par le type de variable 'int16' sans calcul.  
 > De manière générale, il vaut mieux revoir la configuration complète en détail.
 
-Après la création d'un équipement, la liste des commandes est vide (à part les 2 commande liées au raffraîchissement).
+Après la création d'un équipement, la liste des commandes est vide (à part les 2 commandes liées au raffraîchissement).
 Tant que cette liste sera vide, le démon ne pourra pas être lancé et MyModbus génèrera une erreur si l'équipement est
 sauvegardé quand il est activé et que la liste des commandes est vide.
 
@@ -226,7 +232,7 @@ Pour **les commandes info**, les trois sous-types proposés par Jeedom peuvent �
 | int, uint ou float   | Numérique   |
 | chaine de caractères | Autre       |
 
-Pour **les commandes action**, les couleurs et les listes ne sont pas gérées par MyModbus :  
+Pour **les commandes action**, les cinq sous-types proposés par Jeedom peuvent être utilisés :  
 ![Sous-types d'une commande action](../images/Commande_action_sous_types.png)
 
 | Type de registre     | Sous-type        |
@@ -272,6 +278,7 @@ Pour comprendre cette partie, il faut un peu de théorie :
 | chaine de caractères  | Chaine de caractères      |
 | plage de registres    | Plage de registres        |
 | SunSpec scale factor  | Type spécifique à SunSpec |
+|                       |                           |
 
 Pour les types int, uint et float, le démon MyModbus lira le bon nombre de registres en fonction du nombre de bits sur
 lesquels sont codées les variables. L'adresse de ces variables doit être un nombre.
