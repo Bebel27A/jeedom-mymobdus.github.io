@@ -88,6 +88,21 @@ démon est actualisée.
 La configuration se fait via Plugins / Protocole domotique / MyModbus :  
 ![Accès à la configuration](../images/Menu_configuration.png)
 
+## Configuration du plugin
+
+![Configuration du plugin](../images/Configuration_plugin.png)
+
+Il est possible de modifier le port de communication interne entre le démon et le core du plugin. Par défaut, ce port
+est à 55502 et il est fortement conseillé de ne pas le modifier sauf si ce port est utilisé par un autre plugin.
+
+> :warning: ***Important***  
+> Pour modifier ce port, il faut tout d'abord stopper le démon sans quoi le plugin ne pourra plus communiquer avec le
+démon.
+
+Il est également possible de spécifier une ou plusieurs interfaces série personnalisées. Si vous en spécifiez
+plusieurs, elles doivent être séparées par des `;`. Les interface listées ici seront affichées dans la liste des
+interfaces possibles pour un équipement en liaison série à condition que ces interfaces existent.
+
 ## Création d'un équipement 
 
 C'est la première étape. Sans équipement, le démon n'est pas démarré. Après l'installation, la configuration est vide :  

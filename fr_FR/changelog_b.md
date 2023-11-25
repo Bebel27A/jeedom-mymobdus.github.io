@@ -2,18 +2,20 @@
 
 ## TODO
 - Utiliser la dernière version de pymodbus
+- Permettre d'utiliser la même interface série, avec une configuration éventuellement différente, pour plusieurs équipements
 - Templates : exporter, importer (en json) et éventuellement éditer des templates
 - Documentation :
   - Ajouter la méthode pour la mise à l'heure des automates Crouzet et Zelio
   - Documenter les nouvelles fonctionnalités (documentation à jour avec la version V2.0 beta25)
 
-## xx/11/2023 V2.0 beta25 (à venir)
+## 26/11/2023 V2.0 beta25
 - Liste des paquets à installer réduite au minimum
-- Passage à python V3.11.6 sous pyenv
+- Passage à python V3.11.6 sous pyenv. L'étape de réinstallation des dépendances va durer plusieurs dizaines de minutes.
 - Retour arrière sur une modification de la version V2.0 beta24 : le fait que le démon soit "launchable" si plusieurs équipements utilisent le même port série
 - Mise à jour de la documentation
+- Ajout de la possibilité de personnaliser les interfaces série (idée de jmcaous trouvée sur le Community)
 
-## 06/11/2023 V2.0 beta24
+## 08/11/2023 V2.0 beta24
 - Correction erreur 500 à la sauvegarde d'un nouvel équipement (merci ksin)
 - Le démon est "launchable" si plusieurs équipements utilisent le même port série. Dans ce cas, c'est à l'utilisateur de configurer le plugin correctement (merci indirectement à ksin)
 - Petites corrections
