@@ -8,6 +8,9 @@
   - Ajouter la méthode pour la mise à l'heure des automates Crouzet et Zelio
   - Documenter les nouvelles fonctionnalités (documentation à jour avec la version V2.0 beta25)
 
+## 03/12/2023 V2.0 beta27
+- Correction du script post-install.sh pour mettre à jour pyenv correctement avant d'installer python V3.11.6
+
 ## 28/11/2023 V2.0 beta26
 - Correction du script post-install.sh pour mettre à jour pyenv avant d'installer python V3.11.6 (merci ngm47)
 
