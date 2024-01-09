@@ -8,6 +8,9 @@
   - Ajouter la méthode pour la mise à l'heure des automates Crouzet et Zelio
   - Documenter les nouvelles fonctionnalités (documentation à jour avec la version V2.0 beta25)
 
+## 09/01/2024 V2.0 beta28
+- Correction du script post-install.sh pour mettre à jour pyenv même après la restauration d'un backup de Jeedom
+
 ## 03/12/2023 V2.0 beta27
 - Correction du script post-install.sh pour mettre à jour pyenv correctement avant d'installer python V3.11.6
 
