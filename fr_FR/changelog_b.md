@@ -2,7 +2,7 @@
 
 ## TODO
 - Supprimer le mode bi-maître qui ne fonctionne pas
-- Lors de la sauvegarde, si rien n'est préciser dans le champs valeur, invalider la config
+- Lors de la sauvegarde, si rien n'est précisé dans le champs valeur, invalider la config
 - Vérifier les commandes action avant exécution (valeur vide ?)
 - Vérifier si la gestion du démon avec asyncio est conforme aux conseils de Mips (https://community.jeedom.com/t/presentation-tuto-python-asyncio/113199)
 - Utiliser la dernière version de pymodbus
