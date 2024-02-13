@@ -9,6 +9,7 @@
 - Permettre d'utiliser la même interface série, avec une configuration éventuellement différente, pour plusieurs équipements
 - Documentation :
   - Ajouter la méthode pour la mise à l'heure des automates Crouzet et Zelio
+  - Préciser les possibilités du champs valeur des commandes action
   - Documenter les nouvelles fonctionnalités (documentation à jour avec la version V2.0 beta28)
 
 ## 12/02/2024 V2.0 beta29

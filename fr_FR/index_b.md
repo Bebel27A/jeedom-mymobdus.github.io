@@ -241,11 +241,11 @@ commande n'a pas de nom, la configuration n'est pas enregistrée.
 Pour **les commandes info**, les trois sous-types proposés par Jeedom peuvent être utilisés :  
 ![Sous-types d'une commande info](../images/Commande_info_sous_types.png)
 
-| Type de registre     | Sous-type   |
-| -------------------- | ----------- |
-| bit ou bit inversé   | Binaire     |
-| int, uint ou float   | Numérique   |
-| chaine de caractères | Autre       |
+| Type de registre     | Sous-type |
+| -------------------- | --------- |
+| bit ou bit inversé   | Binaire   |
+| int, uint ou float   | Numérique |
+| chaine de caractères | Autre     |
 
 Pour **les commandes action**, les cinq sous-types proposés par Jeedom peuvent être utilisés :  
 ![Sous-types d'une commande action](../images/Commande_action_sous_types.png)
@@ -285,15 +285,15 @@ Pour comprendre cette partie, il faut un peu de théorie :
 
 ![Type de variable](../images/Commande_type_variable.png)
 
-| Codage                | Type de variable          |
-| --------------------- | ------------------------- |
-| int                   | Entier signé              |
-| uint                  | Entier positif            |
-| float                 | Nombre flottant (réel)    |
-| chaine de caractères  | Chaine de caractères      |
-| plage de registres    | Plage de registres        |
-| SunSpec scale factor  | Type spécifique à SunSpec |
-|                       |                           |
+| Codage               | Type de variable          |
+| -------------------- | ------------------------- |
+| int                  | Entier signé              |
+| uint                 | Entier positif            |
+| float                | Nombre flottant (réel)    |
+| chaine de caractères | Chaine de caractères      |
+| plage de registres   | Plage de registres        |
+| SunSpec scale factor | Type spécifique à SunSpec |
+|                      |                           |
 
 Pour les types int, uint et float, le démon MyModbus lira le bon nombre de registres en fonction du nombre de bits sur
 lesquels sont codées les variables. L'adresse de ces variables doit être un nombre.
