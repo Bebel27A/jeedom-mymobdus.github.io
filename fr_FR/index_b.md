@@ -306,7 +306,7 @@ le même que pour une chaine de caractères à savoir 'adresse_début [longueur]
 une requête dépend du matériel et est généralement documenté. Une commande de ce type prend une valeur '1' si la requête
 est exécutée sans erreur. Sinon elle prend la valeur '0'.  
 Pour extraire une valeur de cette plage de registres, les autres commandes doivent être configurées avec une requête
-'Depuis une plage de données'. La commande qui lit la plage concernée est à sélectionner et le champs d'adresse est
+'Depuis une plage de données'. La commande qui lit la plage concernée est à sélectionner et le champ d'adresse est
 identique à ce qui doit être configuré pour une commande standard.  
 Attention à faire en sorte que le registre soit effectivement dans la plage de lecture sans quoi la sauvegarde sera
 invalidée et vous devrez corriger la configuration.
@@ -352,15 +352,15 @@ Deux champs de paramétrages sont proposés :
 - "Lecture 1x sur"
 
 L'option de calcul permet d'appliquer un calcul à la valeur retournée par le démon. Cette option peut être utile pour
-une mise à l'échelle ou le filtrage d'un bit. Vous pouvez mettre dans ce champs le calcul que vous voulez, il suffit de
+une mise à l'échelle ou le filtrage d'un bit. Vous pouvez mettre dans ce champ le calcul que vous voulez, il suffit de
 saisir '#value#' et de respecter la syntaxe de php. Toutes les fonctions mathématiques de php sont disponibles.  
 Exemple : '(#value# + 7) * 3'  
 Si vous souhaitez extraire un bit d'un registre de 16 bits, vous pouvez utiliser la fonction d'aide en cliquant sur
-l'icône ![Icône](../images/Commande_aide_calcul.png) à droite du champs de saisie afin d'appeler la fenêtre suivante :  
+l'icône ![Icône](../images/Commande_aide_calcul.png) à droite du champ de saisie afin d'appeler la fenêtre suivante :  
 ![Icône](../images/Commande_fenêtre_aide_calcul.png)
 
 > :warning: ***Attention***  
-> Ce champs ne doit pas contenir de ';' sinon la sauvegarde est invalidée.
+> Ce champ ne doit pas contenir de ';' sinon la sauvegarde est invalidée.
 
 L'option "Lecture 1x sur" permet de ne pas lire ce registre lors de tous les cycles de polling mais une fois tous les
 X cycles. Cela permet de limiter les requêtes de lecture sur des données statiques, comme un numéro de série par exemple,

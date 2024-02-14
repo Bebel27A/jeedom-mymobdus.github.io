@@ -2,18 +2,21 @@
 
 ## TODO
 - Supprimer le mode bi-maître qui ne fonctionne pas
-- Lors de la sauvegarde, si rien n'est précisé dans le champs valeur, invalider la config
-- Vérifier les commandes action avant exécution (valeur vide ?)
 - Vérifier si la gestion du démon avec asyncio est conforme aux conseils de Mips (https://community.jeedom.com/t/presentation-tuto-python-asyncio/113199)
 - Utiliser la dernière version de pymodbus
 - Permettre d'utiliser la même interface série, avec une configuration éventuellement différente, pour plusieurs équipements
 - Documentation :
   - Ajouter la méthode pour la mise à l'heure des automates Crouzet et Zelio
-  - Préciser les possibilités du champs valeur des commandes action
+  - Préciser les possibilités du champ valeur des commandes action
   - Documenter les nouvelles fonctionnalités (documentation à jour avec la version V2.0 beta28)
 
+## xx/02/2024 V2.0 beta31 (à venir)
+- Lors de la sauvegarde, si rien n'est précisé dans le champ valeur, définir avec `#slider#`, `#select#` ou `#color#` en fonction du cas, sinon invalider la config
+- Lors de la sauvegarde si `#slider#`, `#select#` ou `#color#`, en fonction du cas, n'est pas dans le champ valeur, avertir avec une erreur.
+- Invalider l'exécution d'une commande action si la valeur à écrire est vide
+
 ## 14/02/2024 V2.0 beta30 (mise à jour de la St Valentin)
-- Le champs valeur est sauvegardé correctement
+- Le champ valeur est sauvegardé correctement
 
 ## 12/02/2024 V2.0 beta29
 - Ajout de la gestion de templates (documentation à mettre à jour)  
