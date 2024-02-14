@@ -12,6 +12,9 @@
   - Préciser les possibilités du champs valeur des commandes action
   - Documenter les nouvelles fonctionnalités (documentation à jour avec la version V2.0 beta28)
 
+## 14/02/2024 V2.0 beta30 (mise à jour de la St Valentin)
+- Le champs valeur est sauvegardé correctement
+
 ## 12/02/2024 V2.0 beta29
 - Ajout de la gestion de templates (documentation à mettre à jour)  
 Cette fonctionnalité est basée sur ce qui existe dans jMQTT
