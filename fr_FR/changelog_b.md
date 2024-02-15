@@ -3,6 +3,7 @@
 ## TODO
 - Vérifier si la gestion du démon avec asyncio est conforme aux conseils de Mips (https://community.jeedom.com/t/presentation-tuto-python-asyncio/113199)
 - Utiliser la dernière version de pymodbus
+- Externaliser pyenv dans un plugin dédié
 - Permettre d'utiliser la même interface série, avec une configuration éventuellement différente, pour plusieurs équipements
 - Trouver comment fonctionne le mode bi-maître sur les appareils De Dietrich et proposer un mode de communication compatible
 - Documentation :
