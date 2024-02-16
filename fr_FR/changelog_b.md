@@ -11,6 +11,9 @@
   - Préciser les possibilités du champ valeur des commandes action
   - Documenter les nouvelles fonctionnalités (documentation à jour avec la version V2.0 beta28)
 
+## 17/02/2024 V2.0 beta32
+- Correction pour que '0' puisse être écrit (merci à Doud)
+
 ## 16/02/2024 V2.0 beta31
 - Suppression du mode bi-maître qui ne fonctionne pas
 - Lors de la sauvegarde, si rien n'est précisé dans le champ valeur, définir avec `#slider#`, `#select#` ou `#color#` en fonction du cas, sinon invalider la config
