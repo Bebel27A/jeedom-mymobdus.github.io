@@ -11,6 +11,11 @@
   - Préciser les possibilités du champ valeur des commandes action
   - Documenter les nouvelles fonctionnalités (documentation à jour avec la version V2.0 beta28)
 
+## 21/02/2024 V2.0 beta33
+- Ajout d'un bouton dans la configuration du plugin pour supprimer le répertoire ressources/_pyenv
+- Affichage de toute la config dans le visualisateur de template
+- Possibilité d'utiliser #value# dans le champs valeur d'une commande action pour faire référence à la valeur de la commande info liée
+
 ## 17/02/2024 V2.0 beta32
 - Correction pour que '0' puisse être écrit (merci à Doud)
 
