@@ -3,13 +3,19 @@
 ## TODO
 - Vérifier si la gestion du démon avec asyncio est conforme aux conseils de Mips (https://community.jeedom.com/t/presentation-tuto-python-asyncio/113199)
 - Utiliser la dernière version de pymodbus
-- Externaliser pyenv dans un plugin dédié
 - Permettre d'utiliser la même interface série, avec une configuration éventuellement différente, pour plusieurs équipements
 - Trouver comment fonctionne le mode bi-maître sur les appareils De Dietrich et proposer un mode de communication compatible
 - Documentation :
   - Ajouter la méthode pour la mise à l'heure des automates Crouzet et Zelio
   - Préciser les possibilités du champ valeur des commandes action
   - Documenter les nouvelles fonctionnalités (documentation à jour avec la version V2.0 beta28)
+
+## 06/03/2024 V2.0 beta35
+- Initialisation de pyenv
+
+## 04/03/2024 V2.0 beta34
+- Externalisation de pyenv dans un plugin dédié
+- Suppression du bouton dans la configuration du plugin pour supprimer le répertoire ressources/_pyenv
 
 ## 21/02/2024 V2.0 beta33
 - Ajout d'un bouton dans la configuration du plugin pour supprimer le répertoire ressources/_pyenv
