@@ -10,6 +10,9 @@
   - Préciser les possibilités du champ valeur des commandes action
   - Documenter les nouvelles fonctionnalités (documentation à jour avec la version V2.0 beta28)
 
+## 14/03/2024 V2.0 beta38
+- Logs un peu plus détaillés en mode debug
+
 ## 11/03/2024 V2.0 beta37
 - Amélioration de l'interaction avec pyenv
 
