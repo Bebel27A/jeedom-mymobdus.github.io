@@ -10,6 +10,9 @@
   - Préciser les possibilités du champ valeur des commandes action
   - Documenter les nouvelles fonctionnalités (documentation à jour avec la version V2.0 beta28)
 
+## 03/05/2024 V2.0 beta40
+- Correction de syntaxe sur des messages de log du démon (merci à Jean-Baptiste)
+
 ## 15/04/2024 V2.0 beta39
 - Correction de l'utilisation de la fonction `strtolower` (merci à Jean-Baptiste)
 
