@@ -5,6 +5,7 @@
 - Utiliser la dernière version de pymodbus
 - Permettre de configurer le timeout
 - Permettre d'utiliser la même interface série, avec une configuration éventuellement différente, pour plusieurs équipements
+- Mettre des commandes info à disposition : Communication OK, timeout, code d'erreur, ...
 - Trouver comment fonctionne le mode bi-maître sur les appareils De Dietrich et proposer un mode de communication compatible
 - Documentation :
   - Ajouter la méthode pour la mise à l'heure des automates Crouzet et Zelio
