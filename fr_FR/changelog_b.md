@@ -1,6 +1,7 @@
 # Changelog MyModbus beta
 
 ## TODO
+- Lors de l'exécution d'une commande action, il faut vérifier si l'équipement est actif avant d'envoyer la commande au démon
 - Vérifier si la gestion du démon avec asyncio est conforme aux conseils de Mips (https://community.jeedom.com/t/presentation-tuto-python-asyncio/113199)
 - Utiliser la dernière version de pymodbus
 - Permettre de configurer le timeout
