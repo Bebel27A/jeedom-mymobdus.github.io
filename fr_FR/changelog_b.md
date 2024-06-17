@@ -1,7 +1,6 @@
 # Changelog MyModbus beta
 
 ## TODO
-- Lors de l'exécution d'une commande action, il faut vérifier si l'équipement est actif avant d'envoyer la commande au démon
 - Vérifier si la gestion du démon avec asyncio est conforme aux conseils de Mips (https://community.jeedom.com/t/presentation-tuto-python-asyncio/113199)
 - Utiliser la dernière version de pymodbus
 - Permettre de configurer le timeout
@@ -12,6 +11,10 @@
   - Ajouter la méthode pour la mise à l'heure des automates Crouzet et Zelio
   - Préciser les possibilités du champ valeur des commandes action
   - Documenter les nouvelles fonctionnalités (documentation à jour avec la version V2.0 beta28)
+
+## 17/06/2024 V2.0 beta41
+- Correction d'une erreur de syntaxe (merci m.georgein)
+- Lors de l'exécution d'une commande action, il faut vérifier si l'équipement est actif avant d'envoyer la commande au démon
 
 ## 03/05/2024 V2.0 beta40
 - Correction de syntaxe sur des messages de log du démon (merci à Jean-Baptiste)
