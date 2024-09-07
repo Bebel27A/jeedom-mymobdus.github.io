@@ -1,16 +1,30 @@
 # Changelog MyModbus beta
 
 ## TODO
-- Vérifier si la gestion du démon avec asyncio est conforme aux conseils de Mips (https://community.jeedom.com/t/presentation-tuto-python-asyncio/113199)
-- Utiliser la dernière version de pymodbus
-- Permettre de configurer le timeout
 - Permettre d'utiliser la même interface série, avec une configuration éventuellement différente, pour plusieurs équipements
-- Mettre des commandes info à disposition : Communication OK, timeout, code d'erreur, ...
 - Trouver comment fonctionne le mode bi-maître sur les appareils De Dietrich et proposer un mode de communication compatible
 - Documentation :
   - Ajouter la méthode pour la mise à l'heure des automates Crouzet et Zelio
   - Préciser les possibilités du champ valeur des commandes action
   - Documenter les nouvelles fonctionnalités (documentation à jour avec la version V2.0 beta28)
+
+## xx/09/2024 V2.0 beta42
+
+> :warning: ***Important***  
+> Si des commandes dont l'adresse d'esclave vaut 0 ne fonctionnent plus après la mise à jour, passer cette valeur à 1. Il s'agit
+de la valeur par défaut depuis pymodbus v3.7.0. Si les erreurs persistent, recherchez quelle est la valeur à renseigner dans la
+documentation constructeur.
+
+- Réécriture complète du démon :
+  - Utilisation de bibliothèques de dev tiers pour Jeedom (jeedomdaemon, dependance.lib, pyenv.lib)
+  - Utilisation de pymodbus V3.7.x
+  - Ajout du paramètre Timeout pour la connexion
+  - Structure des appels des sous-classes pymodbus.ModbusRequest inspirée de l'intégration modbus de Home-Assistant
+  - Ajout de la commande info `Cycle OK` qui est mise à 1 si le dernier cycle de lecture s'est déroulé sans erreur, sinon 0
+- Page de configuration de l'équipement :
+  - Plus rapide : sans appels ajax à des pages php locales
+  - Le bouton 'Ajouter une commande' est flottant (merci noodom), le bouton en bas de page est supprimé
+- Suppression du format bit inversé qui ne fonctionnait pas et qui est facile à mettre en place (`not #value#` ou `1 - #value#`)
 
 ## 17/06/2024 V2.0 beta41
 - Correction d'une erreur de syntaxe (merci m.georgein)
