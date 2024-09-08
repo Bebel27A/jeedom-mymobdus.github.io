@@ -11,12 +11,14 @@
 ## xx/09/2024 V2.0 beta42
 
 > :warning: ***Important***  
-> Si des commandes dont l'adresse d'esclave vaut 0 ne fonctionnent plus après la mise à jour, passer cette valeur à 1. Il s'agit
-de la valeur par défaut depuis pymodbus v3.7.0. Si les erreurs persistent, recherchez quelle est la valeur à renseigner dans la
-documentation constructeur.
+> 1. Avant de faire cette mise à jour, désactivez les équipements MyModbus. Après la mise à jour, activez les équipements et
+sauvegardez, normalement tout sera OK.
+> 2. Si des commandes dont l'adresse d'esclave vaut 0 ne fonctionnent plus après la mise à jour, il faut passer cette valeur à 1.
+Il s'agit de la valeur par défaut depuis pymodbus v3.7.0. Si les erreurs persistent, recherchez quelle est la valeur à renseigner
+dans la documentation constructeur.
 
 - Réécriture complète du démon :
-  - Utilisation de bibliothèques de dev tiers pour Jeedom (jeedomdaemon, dependance.lib, pyenv.lib)
+  - Utilisation de bibliothèques de dev tiers pour Jeedom (jeedomdaemon, dependance.lib, pyenv.lib) (merci Mips, nebz et TiTiDom)
   - Utilisation de pymodbus V3.7.x
   - Ajout du paramètre Timeout pour la connexion
   - Structure des appels des sous-classes pymodbus.ModbusRequest inspirée de l'intégration modbus de Home-Assistant
@@ -24,7 +26,8 @@ documentation constructeur.
 - Page de configuration de l'équipement :
   - Plus rapide : sans appels ajax à des pages php locales
   - Le bouton 'Ajouter une commande' est flottant (merci noodom), le bouton en bas de page est supprimé
-- Suppression du format bit inversé qui ne fonctionnait pas et qui est facile à mettre en place (`not #value#` ou `1 - #value#`)
+- Suppression du format bit inversé qui ne fonctionnait pas et qui est facile à mettre en place (`1 - #value#` ou `not #value#`)
+- Prise en compte de l'inversion des octets et des mots pour les chaînes de caractères
 
 ## 17/06/2024 V2.0 beta41
 - Correction d'une erreur de syntaxe (merci m.georgein)
