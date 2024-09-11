@@ -19,14 +19,17 @@ dans la documentation constructeur.
 
 - Réécriture complète du démon :
   - Utilisation de bibliothèques de dev tiers pour Jeedom (jeedomdaemon, dependance.lib, pyenv.lib) (merci Mips, nebz et TiTiDom)
-  - Utilisation de pymodbus V3.7.x
+  - Utilisation de pymodbus V3.7.2 (à ce jour)
+  - Abandon de BinaryPayloadBuilder et BinaryPayloadDecoder appelés à disparaître du module pymodbus (dès 3.8.0 pas encore sortie)
   - Ajout du paramètre Timeout pour la connexion
   - Structure des appels des sous-classes pymodbus.ModbusRequest inspirée de l'intégration modbus de Home-Assistant
-  - Ajout de la commande info `Cycle OK` qui est mise à 1 si le dernier cycle de lecture s'est déroulé sans erreur, sinon 0
+  - Ajout de la commande info `Cycle OK` qui est mise à 1 si le dernier cycle de lecture s'est déroulé sans erreur, sinon 0. Cette
+  commande peut être surveillée. Si elle passe à 0, c'est qu'il y a un problème.
+  - Attente d'une seconde en cas d'erreur de lecture afin de na pas faire une erreur sur le reste des commandes
 - Page de configuration de l'équipement :
   - Plus rapide : sans appels ajax à des pages php locales
   - Le bouton 'Ajouter une commande' est flottant (merci noodom), le bouton en bas de page est supprimé
-- Suppression du format bit inversé qui ne fonctionnait pas et qui est facile à mettre en place (`1 - #value#` ou `not #value#`)
+- Suppression du format bit inversé qui ne fonctionnait pas et qui est facile à mettre en place (`1 - #value#`)
 - Prise en compte de l'inversion des octets et des mots pour les chaînes de caractères
 
 ## 17/06/2024 V2.0 beta41
