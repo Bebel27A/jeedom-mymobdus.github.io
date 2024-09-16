@@ -1,6 +1,7 @@
 # Changelog MyModbus beta
 
 ## TODO
+- Traduction
 - Permettre d'utiliser la même interface série, avec une configuration éventuellement différente, pour plusieurs équipements
 - Trouver comment fonctionne le mode bi-maître sur les appareils De Dietrich et proposer un mode de communication compatible
 - Documentation :
@@ -8,11 +9,12 @@
   - Préciser les possibilités du champ valeur des commandes action
   - Documenter les nouvelles fonctionnalités (documentation à jour avec la version V2.0 beta28)
 
-## xx/09/2024 V2.0 beta42
+## 17/09/2024 V2.0 beta42
 
 > :warning: ***Important***  
-> 1. Avant de faire cette mise à jour, désactivez les équipements MyModbus. Après la mise à jour, activez les équipements et
-sauvegardez, normalement tout sera OK.
+> 1. Avant de faire cette mise à jour, désactivez les équipements MyModbus. Faites une capture de la configuration des équipements
+et des commandes. Après la mise à jour, **sauvegardez les équipements sans les activer**. Vérifiez bien la configuration des
+commandes.
 > 2. Si des commandes dont l'adresse d'esclave vaut 0 ne fonctionnent plus après la mise à jour, il faut passer cette valeur à 1.
 Il s'agit de la valeur par défaut depuis pymodbus v3.7.0. Si les erreurs persistent, recherchez quelle est la valeur à renseigner
 dans la documentation constructeur.
@@ -20,16 +22,23 @@ dans la documentation constructeur.
 - Réécriture complète du démon :
   - Utilisation de bibliothèques de dev tiers pour Jeedom (jeedomdaemon, dependance.lib, pyenv.lib) (merci Mips, nebz et TiTiDom)
   - Utilisation de pymodbus V3.7.2 (à ce jour)
+  - Abandon de la dépendance avec pyenv4Jeedom
   - Abandon de BinaryPayloadBuilder et BinaryPayloadDecoder appelés à disparaître du module pymodbus (dès 3.8.0 pas encore sortie)
-  - Ajout du paramètre Timeout pour la connexion
-  - Structure des appels des sous-classes pymodbus.ModbusRequest inspirée de l'intégration modbus de Home-Assistant
+  - Ajout des paramètres d'équipement :
+    - Timeout pour la connexion
+    - Nombre de tentatives en cas d'erreur de lecture
+    - Temps d'attente après une erreur de lecture pour éviter d'enchainer les erreurs pour la même raison
+  - Structure des appels des sous-classes pymodbus.ModbusRequest inspirée de l'intégration Modbus de Home-Assistant
   - Ajout de la commande info `Cycle OK` qui est mise à 1 si le dernier cycle de lecture s'est déroulé sans erreur, sinon 0. Cette
-  commande peut être surveillée. Si elle passe à 0, c'est qu'il y a un problème.
+  commande peut être surveillée. Si elle passe à 0, c'est qu'il y a eu un problème durant le dernier cycle de lecture
   - Attente d'une seconde en cas d'erreur de lecture afin de na pas faire une erreur sur le reste des commandes
+  - Il n'est plus possible de modifier le niveau de log à la volée, il faut redémarrer le démon
 - Page de configuration de l'équipement :
   - Plus rapide : sans appels ajax à des pages php locales
   - Le bouton 'Ajouter une commande' est flottant (merci noodom), le bouton en bas de page est supprimé
 - Suppression du format bit inversé qui ne fonctionnait pas et qui est facile à mettre en place (`1 - #value#`)
+- Suppression des formats int8, seuls les formats uint8 sont gardés
+- Suppression du format float16
 - Prise en compte de l'inversion des octets et des mots pour les chaînes de caractères
 
 ## 17/06/2024 V2.0 beta41
