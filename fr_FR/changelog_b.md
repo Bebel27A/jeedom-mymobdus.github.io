@@ -31,7 +31,6 @@ dans la documentation constructeur.
   - Structure des appels des sous-classes pymodbus.ModbusRequest inspirée de l'intégration Modbus de Home-Assistant
   - Ajout de la commande info `Cycle OK` qui est mise à 1 si le dernier cycle de lecture s'est déroulé sans erreur, sinon 0. Cette
   commande peut être surveillée. Si elle passe à 0, c'est qu'il y a eu un problème durant le dernier cycle de lecture
-  - Attente d'une seconde en cas d'erreur de lecture afin de na pas faire une erreur sur le reste des commandes
   - Il n'est plus possible de modifier le niveau de log à la volée, il faut redémarrer le démon
 - Page de configuration de l'équipement :
   - Plus rapide : sans appels ajax à des pages php locales
