@@ -9,6 +9,14 @@
   - Préciser les possibilités du champ valeur des commandes action
   - Documenter les nouvelles fonctionnalités (documentation à jour avec la version V2.0 beta28)
 
+## 18/09/2024 V2.0 beta43
+- Optimisation du verrou qui permet les requêtes afin que les écritures puissent être faites plus rapidement
+- Vérification de l'état de la connexion avant chaque requête
+- Le polling peut être configuré à 0.01s minimum
+- Reprise de l'ancienne configuration du format de données pour les commandes action également
+- Le démon n'est pas "launchable" si le venv n'est pas présent
+- Suppression de l'ancien répertoire mal orthographié "ressources" (avec 2 S)
+
 ## 17/09/2024 V2.0 beta42
 
 > :warning: ***Important***  
