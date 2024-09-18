@@ -9,6 +9,10 @@
   - Préciser les possibilités du champ valeur des commandes action
   - Documenter les nouvelles fonctionnalités (documentation à jour avec la version V2.0 beta28)
 
+## 19/09/2024 V2.0 beta44
+- Prise en compte de la configuration d'inversion des octets et des mots pour les valeurs lues depuis une plage de registres
+(merci thomaspascal)
+
 ## 18/09/2024 V2.0 beta43
 - Optimisation du verrou qui permet les requêtes afin que les écritures puissent être faites plus rapidement
 - Vérification de l'état de la connexion avant chaque requête
