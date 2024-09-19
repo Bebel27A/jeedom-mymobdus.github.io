@@ -9,6 +9,11 @@
   - Préciser les possibilités du champ valeur des commandes action
   - Documenter les nouvelles fonctionnalités (documentation à jour avec la version V2.0 beta28)
 
+## 20/09/2024 V2.0 beta45
+- Correction du problème avec les templates
+- Correction du problème avec l'ordre des mots d'une valeurs sur plus de 32 bits dans une plage de registres
+- Correction de la prise en charge du paramètre "port" pour les liaisons série
+
 ## 19/09/2024 V2.0 beta44
 - Prise en compte de la configuration d'inversion des octets et des mots pour les valeurs lues depuis une plage de registres
 (merci thomaspascal)
