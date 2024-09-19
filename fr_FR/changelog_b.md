@@ -11,7 +11,8 @@
 
 ## 20/09/2024 V2.0 beta45
 - Correction du problème avec les templates
-- Correction du problème avec l'ordre des mots d'une valeurs sur plus de 32 bits dans une plage de registres
+- Correction du problème avec l'ordre des mots d'une valeurs sur plus de 32 bits dans une plage de registres lorsque l'offset
+dans la plage de registres est impaire
 - Correction de la prise en charge du paramètre "port" pour les liaisons série
 
 ## 19/09/2024 V2.0 beta44
