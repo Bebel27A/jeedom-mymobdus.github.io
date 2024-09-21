@@ -9,6 +9,11 @@
   - Préciser les possibilités du champ valeur des commandes action
   - Documenter les nouvelles fonctionnalités (documentation à jour avec la version V2.0 beta28)
 
+## 22/09/2024 V2.0 beta46
+- Vérification que la commande existe bien lorsqu'un changement de valeur est reçu pour éviter une erreur (merci thomaspascal)
+- Affichage du bouton "Supprimer" dans le viewer de template (merci thomaspascal)
+- Corrections pour les connexions série (merci wocha-fr)
+
 ## 20/09/2024 V2.0 beta45
 - Correction du problème avec les templates
 - Correction du problème avec l'ordre des mots d'une valeurs sur plus de 32 bits dans une plage de registres lorsque l'offset
