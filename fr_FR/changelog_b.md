@@ -9,6 +9,16 @@
   - Préciser les possibilités du champ valeur des commandes action
   - Documenter les nouvelles fonctionnalités (documentation à jour avec la version V2.0 beta28)
 
+## 23/09/2024 V2.0 beta47
+
+> :warning: ***Important***  
+> A partir de cette version, l'inversion des mots ne sera plus nécessaire. La logique a été inversée dans le module pymodbus,
+alors j'ai fait des fonctions à ma sauce. Cela affecte les commandes info et action sur des variables d'au moins 32 bits.
+> Veillez à bien vérifier votre configuration avant et à faire les adaptations nécessaires.
+
+- Gestion interne du boutisme (endianess) et non plus via pymodbus
+- Suppression du double log en cas d'erreur de lecture
+
 ## 22/09/2024 V2.0 beta46
 - Vérification que la commande existe bien lorsqu'un changement de valeur est reçu pour éviter une erreur (merci thomaspascal)
 - Affichage du bouton "Supprimer" dans le viewer de template (merci thomaspascal)
