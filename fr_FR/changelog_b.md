@@ -13,6 +13,7 @@
 - Correction de la fonction eqLogic.getDeamonLaunchable (merci wocha-fr)
 - Correction du type d'un index de dictionnaire (merci wocha-fr)
 - Corrections de syntaxe (merci thomaspascal, Droopy et lperenna)
+- [ESSAI] Gestion correcte d'un temps d'attente après erreur plus long (quelques minutes)
 
 ## 23/09/2024 V2.0 beta47
 
