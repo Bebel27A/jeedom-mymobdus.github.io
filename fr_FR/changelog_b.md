@@ -17,8 +17,9 @@
 ## 23/09/2024 V2.0 beta47
 
 > :warning: ***Important***  
-> A partir de cette version, l'inversion des mots ne sera plus nécessaire. La logique a été inversée dans le module pymodbus,
-alors j'ai fait des fonctions à ma sauce. Cela affecte les commandes info et action sur des variables d'au moins 32 bits.
+> A partir de cette version, l'inversion des mots ne sera plus nécessaire si l’architecture du CPU est identique entre
+l’appareil et votre machine Jeedom. La logique a été inversée dans le module pymodbus, alors j'ai fait des fonctions à ma sauce.
+Cela affecte les commandes info et action sur des variables d'au moins 32 bits.
 > Veillez à bien vérifier votre configuration avant et à faire les adaptations nécessaires.
 
 - Gestion interne du boutisme (endianess) et non plus via pymodbus
