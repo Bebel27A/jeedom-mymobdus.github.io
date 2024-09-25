@@ -9,6 +9,9 @@
   - Préciser les possibilités du champ valeur des commandes action
   - Documenter les nouvelles fonctionnalités (documentation à jour avec la version V2.0 beta28)
 
+## 25/09/2024 V2.0 beta49
+- Correction de l'erreur de syntaxe qui bloquait les écritures (merci wocha-fr)
+
 ## 24/09/2024 V2.0 beta48
 - Correction de la fonction eqLogic.getDeamonLaunchable (merci wocha-fr)
 - Correction du type d'un index de dictionnaire (merci wocha-fr)
