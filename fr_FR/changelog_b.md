@@ -9,6 +9,10 @@
   - Préciser les possibilités du champ valeur des commandes action
   - Documenter les nouvelles fonctionnalités (documentation à jour avec la version V2.0 beta28)
 
+## 27/09/2024 V2.0 beta50
+- Si les valeurs saisies dans la configuration commencent ou se terminent par des espaces, ceux-ci sont ignorés
+- Le polling n'est plus recalculé en cas d'erreur durant le cycle
+
 ## 25/09/2024 V2.0 beta49
 - Correction de l'erreur de syntaxe qui bloquait les écritures (merci wocha-fr)
 
