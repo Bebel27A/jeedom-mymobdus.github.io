@@ -7,7 +7,7 @@
   - Documenter les nouvelles fonctionnalités (documentation à jour avec la version V2.0 beta51)
 
 ## xx/10/2024 V2.0 beta51 (en cours de développement)
-- Nouveauté : utilisation la même interface pour plusieurs équipements
+- Nouveauté : utilisation de la même interface pour plusieurs équipements
 - Nouveauté : ajout d'une commande info 'Polling' qui contient le temps de polling recalculé actuel (si la commande n'existe pas,
 sauvegardez l'équipement)
 - Correction : la commande "Cycle OK" est mise à 0 dès qu'une erreur se produit et est mise à 1 dès qu'un cycle complet (lecture
