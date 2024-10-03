@@ -2,17 +2,18 @@
 
 ## TODO
 - Traduction
-- Permettre d'utiliser la même interface, avec une configuration éventuellement différente pour les interfaces série, pour plusieurs équipements
-- Trouver comment fonctionne le mode bi-maître sur les appareils De Dietrich et proposer un mode de communication compatible
+- Trouver comment fonctionne le mode bi-maître sur les chaudières De Dietrich et proposer un mode de communication compatible
 - Documentation :
-  - Ajouter la méthode pour la mise à l'heure des automates Crouzet et Zelio
-  - Préciser les possibilités du champ valeur des commandes action
-  - Documenter les nouvelles fonctionnalités (documentation à jour avec la version V2.0 beta28)
+  - Documenter les nouvelles fonctionnalités (documentation à jour avec la version V2.0 beta51)
 
 ## xx/10/2024 V2.0 beta51 (en cours de développement)
-- Ajout d'une commande info 'Polling' qui contient le temps de polling recalculé actuel (si la commande n'existe pas, sauvegardez l'équipement)
+- Nouveauté : utilisation la même interface pour plusieurs équipements
+- Nouveauté : ajout d'une commande info 'Polling' qui contient le temps de polling recalculé actuel (si la commande n'existe pas,
+sauvegardez l'équipement)
+- Correction : la commande "Cycle OK" est mise à 0 dès qu'une erreur se produit et est mise à 1 dès qu'un cycle complet (lecture
+de toutes les commandes info) s'est déroulé sans erreur
 - Structure du démon: la classe MyModbusConfig est écrite dans un fichier dédié
-- Suppression effective de l'ancien répertoire 'ressources' (avec 2 S) qui n'est plus utilisé
+- [ESSAI] Suppression effective de l'ancien répertoire 'ressources' (avec 2 S) qui n'est plus utilisé
 
 ## 26/09/2024 V2.0 beta50
 - Si les valeurs saisies dans la configuration commencent ou se terminent par des espaces, ceux-ci sont ignorés
