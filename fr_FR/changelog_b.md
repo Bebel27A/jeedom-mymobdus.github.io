@@ -6,12 +6,17 @@
 - Documentation :
   - Documenter les nouvelles fonctionnalités (documentation à jour avec la version V2.0 beta51)
 
-## xx/10/2024 V2.0 beta51 (en cours de développement)
+## 05/10/2024 V2.0 beta51
 - Nouveauté : utilisation de la même interface pour plusieurs équipements
 - Nouveauté : ajout d'une commande info 'Polling' qui contient le temps de polling recalculé actuel (si la commande n'existe pas,
 sauvegardez l'équipement)
 - Correction : la commande "Cycle OK" est mise à 0 dès qu'une erreur se produit et est mise à 1 dès qu'un cycle complet (lecture
 de toutes les commandes info) s'est déroulé sans erreur
+- Correction du mode "Sur événement" qui pouvait ne pas réagir à la commande "Rafraîchir"
+- Correction du mode "Sur événement" qui rajoutait une boucle de lecture à chaque rafraîchissement
+- En mode "Sur événement", suppression des tâches run_loop "done"
+- Amélioration de la gestion de la connexion
+- Amélioration de la gestion d'une nouvelle configuration
 - Structure du démon: la classe MyModbusConfig est écrite dans un fichier dédié
 - [ESSAI] Suppression effective de l'ancien répertoire 'ressources' (avec 2 S) qui n'est plus utilisé
 
