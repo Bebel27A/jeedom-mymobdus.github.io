@@ -375,7 +375,8 @@ et de ne pas surcharger la communication inutilement.
 
 Le seul paramètre est la valeur à écrire. Là aussi, MyModbus utilise les fonctions de Jeedom, vous pouvez donc :
 - saisir une valeur (ou un texte pour les commandes du sous-type "Message") qui sera toujours écrite
-- saisir '#slider#' pour les commandes du sous-type "Curseur"  
+- saisir '#slider#' pour les commandes du sous-type "Curseur"
+
 Si la commande action est liée à une commande info (qui relit la valeur), il est possible d'utiliser cette valeur lue
 en utilisant `#value#`.
 
