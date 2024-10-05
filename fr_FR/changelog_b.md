@@ -6,7 +6,7 @@
 - Documentation :
   - Documenter les nouvelles fonctionnalités (documentation à jour avec la version V2.0 beta51)
 
-## xx/10/2024 V2.0 beta52 (en cours de développement)
+## xx/10/2024 V2.0 beta52 (en cours de développement et test)
 - Nouveauté : inversion des doubles-mots possible
 - Nouveauté : affichage de la configuration d'inversion en fonction du type de donnée
 
