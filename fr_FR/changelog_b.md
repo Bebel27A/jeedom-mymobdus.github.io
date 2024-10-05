@@ -6,6 +6,10 @@
 - Documentation :
   - Documenter les nouvelles fonctionnalités (documentation à jour avec la version V2.0 beta51)
 
+## xx/10/2024 V2.0 beta52 (en cours de développement)
+- Nouveauté : inversion des doubles-mots possible
+- Nouveauté : affichage de la configuration d'inversion en fonction du type de donnée
+
 ## 05/10/2024 V2.0 beta51
 - Nouveauté : utilisation de la même interface pour plusieurs équipements
 - Nouveauté : ajout d'une commande info 'Polling' qui contient le temps de polling recalculé actuel (si la commande n'existe pas,
@@ -17,7 +21,7 @@ de toutes les commandes info) s'est déroulé sans erreur
 - En mode "Sur événement", suppression des tâches run_loop "done"
 - Amélioration de la gestion de la connexion
 - Amélioration de la gestion d'une nouvelle configuration
-- Structure du démon: la classe MyModbusConfig est écrite dans un fichier dédié
+- Structure du démon : la classe MyModbusConfig est écrite dans un fichier dédié
 - [ESSAI] Suppression effective de l'ancien répertoire 'ressources' (avec 2 S) qui n'est plus utilisé
 
 ## 26/09/2024 V2.0 beta50
