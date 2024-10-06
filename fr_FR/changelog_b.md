@@ -4,9 +4,9 @@
 - Traduction
 - Trouver comment fonctionne le mode bi-maître sur les chaudières De Dietrich et proposer un mode de communication compatible
 - Documentation :
-  - Documenter les nouvelles fonctionnalités (documentation à jour avec la version V2.0 beta51)
+  - Documenter les nouvelles fonctionnalités (documentation à jour avec la version V2.0 beta52)
 
-## xx/10/2024 V2.0 beta52 (en cours de développement et test)
+## 07/10/2024 V2.0 beta52
 - Nouveauté : inversion des doubles-mots possible
 - Nouveauté : affichage de la configuration d'inversion en fonction du type de donnée
 

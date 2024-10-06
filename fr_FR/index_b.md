@@ -340,13 +340,13 @@ une adresse avant celle de la valeur ('40223 sf 40210' par exemple) MyModbus ada
 > être utilisé dans différents appareils. Si d'autres types spéciaux devaient être inclus dans MyModbus, vous pouvez en
 > faire la demande sur le forum Community en précisant bien le tag `#plugin-mymodbus`.
 
-### Inverser les octets ou les mots
+### Inverser les octets, les mots ou les double-mots
 
-Si les données lues sont incohérentes, il se peut que cela soit du au fait que les octets ou les mots soient inversés
-dans la mémoire de l'appareil. Ceci est lié au type de processeur utilisé et peut être corrigé en cochant la bonne
-configuration. C'est la différence entre "little endian" et "big endian". Le même format que le processeur de la
-machine Jeedom est utilisé par défaut. Si la case est cochée, le format est inversé. Attention donc à ce point si vous
-partagez un template d'équipement.
+Si les données lues sont incohérentes, il se peut que cela soit du au fait que les octets, les mots ou les doubles-mots
+soient inversés dans la mémoire de l'appareil. Ceci est lié au type de processeur utilisé et peut être corrigé en
+cochant la bonne configuration. C'est la différence entre "little endian" et "big endian". Le même format que le
+processeur de la machine Jeedom est utilisé par défaut. Si la case est cochée, le format est inversé. Attention donc à
+ce point si vous partagez un template d'équipement.
 
 ![Adresse Modbus](../images/Commande_adresse_modbus.png)
 
