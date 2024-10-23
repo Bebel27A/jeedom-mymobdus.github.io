@@ -6,7 +6,7 @@
 - Documentation :
   - Documenter les nouvelles fonctionnalités (documentation à jour avec la version V2.0 beta52)
 
-## 23/10/2024 V2.0 beta54
+## 24/10/2024 V2.0 beta54
 - Forçage de la version de pymodbus à 3.7.3
 
 ## 16/10/2024 V2.0 beta53
