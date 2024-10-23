@@ -6,6 +6,12 @@
 - Documentation :
   - Documenter les nouvelles fonctionnalités (documentation à jour avec la version V2.0 beta52)
 
+## 23/10/2024 V2.0 beta54
+- Forçage de la version de pymodbus à 3.7.3
+
+## 16/10/2024 V2.0 beta53
+- Mise à jour de jeedomdaemon (il faut relancer l'installation des dépendances)
+
 ## 07/10/2024 V2.0 beta52
 - Nouveauté : inversion des doubles-mots possible
 - Nouveauté : affichage de la configuration d'inversion en fonction du type de donnée
