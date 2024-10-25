@@ -13,7 +13,8 @@ cas d'utilisation de la même interface
 ## 25/10/2024 V2.0 beta55
 
 > :warning: ***Important***  
-> Une réinstallation des dépendances doit être lancée sans quoi le démon MyModbus ne fonctionnera pas.
+> Une réinstallation des dépendances doit être faite sans quoi le démon MyModbus ne fonctionnera pas.
+> Elle est lancée automatiquement après la mise à jour du plugin.
 
 - Utilisation de pymodbus V3.7.4
 
