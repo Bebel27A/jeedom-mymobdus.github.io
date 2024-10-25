@@ -2,9 +2,20 @@
 
 ## TODO
 - Traduction
-- Trouver comment fonctionne le mode bi-maître sur les chaudières De Dietrich et proposer un mode de communication compatible
+- Ne plus utiliser le dépôt github de Bebel27 pour la documentation
 - Documentation :
-  - Documenter les nouvelles fonctionnalités (documentation à jour avec la version V2.0 beta52)
+  - Documenter les nouvelles fonctionnalités (documentation à jour avec la version V2.0 beta55)
+
+## xx/1x/2024 V2.0 beta56 (en cours de développement)
+- Possibilité de déplacer des commandes d'un équipement à un autre afin de garder les commandes lors d'un split d'équipement en
+cas d'utilisation de la même interface
+
+## 25/10/2024 V2.0 beta55
+
+> :warning: ***Important***  
+> Une réinstallation des dépendances doit être lancée sans quoi le démon MyModbus ne fonctionnera pas.
+
+- Utilisation de pymodbus V3.7.4
 
 ## 24/10/2024 V2.0 beta54
 - Forçage de la version de pymodbus à 3.7.3

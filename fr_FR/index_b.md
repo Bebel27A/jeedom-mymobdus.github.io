@@ -63,7 +63,9 @@ Vous pouvez activer la gestion automatique du démon par Jeedom si vous le souha
 
 MyModbus lance un démon écrit en Python qui utilise le module [pymodbus](https://pypi.org/project/pymodbus/).  
 Dans la documentation de pymodbus, on peut voir que la version minimale requise pour pouvoir l'utiliser est
-Python >= 3.9, ne vous inquiétez pas, ce point est géré quelle que soit la version installée sur votre machine Jeedom.
+Python3, de préférence la version 3.11, ne vous inquiétez pas, ce point est géré quelle que soit la version installée
+sur votre machine Jeedom.  
+Dans la mesure du possible MyModbus utilisera la dernière version de pymodbus.
 
 ***
 
