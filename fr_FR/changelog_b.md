@@ -4,9 +4,9 @@
 - Traduction
 - Ne plus utiliser le dépôt github de Bebel27 pour la documentation
 - Documentation :
-  - Documenter les nouvelles fonctionnalités (documentation à jour avec la version V2.0 beta56)
+  - Documenter les nouvelles fonctionnalités (documentation à jour avec la version V2.0 beta57)
 
-## xx/1x/2024 V2.0 beta56 (en cours de développement)
+## xx/1x/2024 V2.0 beta57 (en cours de développement)
 - Outil de déplacement des commandes d'un équipement à un autre afin de garder les commandes lors d'un split d'équipement en
 cas d'utilisation de la même interface
 
