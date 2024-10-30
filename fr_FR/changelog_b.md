@@ -10,6 +10,9 @@
 - Possibilité de déplacer des commandes d'un équipement à un autre afin de garder les commandes lors d'un split d'équipement en
 cas d'utilisation de la même interface
 
+## 30/10/2024 V2.0 beta56
+- Correction sur les fonctions d'écriture
+
 ## 25/10/2024 V2.0 beta55
 
 > :warning: ***Important***  
