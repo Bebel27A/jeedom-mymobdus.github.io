@@ -6,7 +6,7 @@ communiquer en :
 - Ethernet UDP
 - Série en mode binaire, ASCII ou RTU
 
-Il est compatible avec plusieurs types d’appareil (automate, chaudière, VMC, redresseur, …).
+Il est compatible avec plusieurs types d’appareil (automate, chaudière, VMC, onduleur, …).
 
 ## Modbus ?
 
@@ -75,10 +75,16 @@ Dans la mesure du possible MyModbus utilisera la dernière version de pymodbus.
 
 Pour chaque appareil avec lequel vous souhaitez communiquer en Modbus, il faudra créer un équipement. Cet équipement
 contiendra autant de commandes info ou action que vous avez de variables à lire ou à écrire. Les principes de Jeedom
-sont respectés. Si vous souhaitez scinder un appareil en plusieurs équipement, c'est possible, il suffit d'utiliser
+sont respectés. Si vous souhaitez scinder un appareil en plusieurs équipements, c'est possible, il suffit d'utiliser
 "Interface d'un autre équipement" pour le deuxième équipement et de choisir l'équipement dont la connexion sera
 utilisée :
 ![Connexion partagée](../images/Interface_partagée.png)
+
+Un outil "Déplacer les commandes", accessible depuis la page de gestion des équipements, permet de déplacer les
+commandes entre les équipement partageant la même interface afin de ne pas perdre l'historique ni tous les liens dans
+les scénarios et autres, après avoir scinder un équipement. Cet outil ne fonctionne que si les équipements utilisent la
+même interface. Il faut donc avoir créé et configuré l'équipement AVANT de vouloir déplacer les commandes.  
+Avec cet outil, si une plage de registres est déplacée, toutes les commandes y étant liées sont également déplacées.
 
 Pour chaque équipement, il faut préciser le type de connexion ainsi que les paramètres de cette connexion.
 
@@ -203,7 +209,7 @@ interface utiliser.
 > Il se peut que les interfaces proposées par MyModbus soient redondantes avec celles proposées par Jeedom et que la
 > sélection soit différente une fois que vous avez sauvegardé et rechargé cette page. Ne vous inquiétez pas, cela
 > signifie seulement que l'élément sélectionné pointe vers la même interface que celle que vous avez enregistrée, mais
-> cette entrée apparaît avant l'entrée que vous avez selectionnée.
+> cette entrée apparaît, dans la liste, avant l'entrée que vous avez selectionnée.
 
 Les autres paramètres sont à aligner avec la configuration décrite dans la documentation constructeur de votre appareil.
 
@@ -272,7 +278,7 @@ une passerelle IP/série, vous devez renseigner l'adresse de l'esclave sur le bu
 
 > :memo: ***Remarque***  
 > 1. L'adresse esclave "0" correspond au broadcast dans le protocole. Cette adresse n'est pas supportée par la version
-> pymodbus 3.7.2. Un correctif devrait sortir d'ici peu de temps.  
+> pymodbus 3.7.2. Ce problème est corrigé dans les versions suivantes.  
 > 2. Sur l'ancienne version bêta, ce paramètre s'appelait "Unit ID" et était à configurer dans l'équipement.
 
 ### Fonction Modbus
@@ -447,5 +453,3 @@ Exemple d'erreur sur la configuration de l'équipement 'Equipement MyModbus' :
 
 Exemple d'erreur sur la configuration de la commande 'Température extérieure' :  
 ![Erreur sur une commande](../images/Erreur_commande.png)
-
-
