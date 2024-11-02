@@ -3,10 +3,11 @@
 ## TODO
 - Traduction
 - Ne plus utiliser le dépôt github de Bebel27 pour la documentation
+- Proposer un outil permettant de vérifier l'existence de registres avec différentes configuration de décodage des informations reçues.
 - Documentation :
   - Documenter les nouvelles fonctionnalités (documentation à jour avec la version V2.0 beta57)
 
-## xx/1x/2024 V2.0 beta57 (en cours de développement)
+## 03/11/2024 V2.0 beta57
 - Outil de déplacement des commandes d'un équipement à un autre afin de garder les commandes lors d'un split d'équipement en
 cas d'utilisation de la même interface
 
