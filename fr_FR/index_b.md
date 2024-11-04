@@ -368,8 +368,9 @@ L'option de calcul permet d'appliquer un calcul à la valeur retournée par le d
 une mise à l'échelle ou le filtrage d'un bit. Vous pouvez mettre dans ce champ le calcul que vous voulez, il suffit de
 saisir '#value#' et de respecter la syntaxe de php. Toutes les fonctions mathématiques de php sont disponibles.  
 Exemple : '(#value# + 7) * 3'  
-Si vous souhaitez extraire un bit d'un registre de 16 bits, vous pouvez utiliser la fonction d'aide en cliquant sur
-l'icône ![Icône](../images/Commande_aide_calcul.png) à droite du champ de saisie afin d'appeler la fenêtre suivante :  
+Si vous souhaitez extraire un bit d'un registre de 16 bits (préférablement de type uint16), vous pouvez utiliser la
+fonction d'aide en cliquant sur l'icône ![Icône](../images/Commande_aide_calcul.png) à droite du champ de saisie afin
+d'appeler la fenêtre suivante :  
 ![Icône](../images/Commande_fenêtre_aide_calcul.png)
 
 > :warning: ***Attention***  
