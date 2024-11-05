@@ -5,7 +5,7 @@
 - Ne plus utiliser le dépôt github de Bebel27 pour la documentation
 - Proposer un outil permettant de vérifier l'existence de registres avec différentes configuration de décodage des informations reçues.
 - Documentation :
-  - Documenter les nouvelles fonctionnalités (documentation à jour avec la version V2.0 beta57)
+  - Documenter les nouvelles fonctionnalités (documentation à jour avec la version V2.0 beta58)
 
 ## 05/11/2024 V2.0 beta58
 - Cas particulier d'extraction d'un bit de registre dans une plage de registres (merci Doud)
@@ -65,8 +65,8 @@ de toutes les commandes info) s'est déroulé sans erreur
 ## 23/09/2024 V2.0 beta47
 
 > :warning: ***Important***  
-> A partir de cette version, l'inversion des mots ne sera plus nécessaire si l’architecture du CPU est identique entre
-l’appareil et votre machine Jeedom. La logique a été inversée dans le module pymodbus, alors j'ai fait des fonctions à ma sauce.
+> A partir de cette version, l'inversion des mots ne sera plus nécessaire si l'architecture du CPU est identique entre
+l'appareil et votre machine Jeedom. La logique a été inversée dans le module pymodbus, alors j'ai fait des fonctions à ma sauce.
 Cela affecte les commandes info et action sur des variables d'au moins 32 bits.
 > Veillez à bien vérifier votre configuration avant et à faire les adaptations nécessaires.
 
@@ -226,7 +226,7 @@ Cette fonctionnalité est basée sur ce qui existe dans jMQTT
 - Pour les commandes binaires depuis une plage de registres, les plages numériques en source sont possibles mais un filtre doit être spécifié (merci à Noyax37)
 
 ## 10/04/2023 V2.0 beta16
-- Petite correction sur le log lors de l’exécution d’une commande action
+- Petite correction sur le log lors de l'exécution d'une commande action
 
 ## 09/04/2023 V2.0 beta15
 - Amélioration de la saisie des commandes an désélectionnant les options invisibles (merci à Noyax37)
