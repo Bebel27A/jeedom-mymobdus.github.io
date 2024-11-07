@@ -3,7 +3,7 @@
 ## 07/11/2024 versions stable et bêta sans modification de version
 - Mise à jour du lien vers la documentation
 
-Explications : https://community.jeedom.com/t/evolutions-du-plugin-mymodbus-version-stable/133443?u=michel_f
+Explications : [https://mrwaloo.github.io/jeedom-plugins-doc/fr_FR/mymodbus_doc](https://mrwaloo.github.io/jeedom-plugins-doc/fr_FR/mymodbus_doc)
 
 # 08/03/2023 V2.3 s
 
