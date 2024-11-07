@@ -7,6 +7,11 @@
 - Documentation :
   - Documenter les nouvelles fonctionnalités (documentation à jour avec la version V2.0 beta58)
 
+## 07/11/2024 versions stable et bêta sans modification de version
+- Mise à jour du lien vers la documentation
+
+Explications : https://community.jeedom.com/t/evolutions-du-plugin-mymodbus-version-stable/133443?u=michel_f
+
 ## 05/11/2024 V2.0 beta58
 - Cas particulier d'extraction d'un bit de registre dans une plage de registres (merci Doud)
 

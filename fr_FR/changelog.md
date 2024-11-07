@@ -1,5 +1,10 @@
 ### Changelog MYMODBUS STABLE
 
+## 07/11/2024 versions stable et bêta sans modification de version
+- Mise à jour du lien vers la documentation
+
+Explications : https://community.jeedom.com/t/evolutions-du-plugin-mymodbus-version-stable/133443?u=michel_f
+
 # 08/03/2023 V2.3 s
 
 - Passage de la version beta en stable , il faudra impérativement  relancer les dépendances !
